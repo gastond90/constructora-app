@@ -74,8 +74,6 @@ function Menu() {
     };
   });
 
-  console.log(menurender)
-
   return (
     <div className="container mx-auto bg-gray-100 py-8 px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold text-center mb-8">Menú</h1>
