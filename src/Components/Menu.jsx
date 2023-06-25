@@ -5,7 +5,6 @@ import axios from 'axios';
 function Menu() {
     const [platos, setPlatos] = useState([]);
     const [categorias, setCategorias] = useState([]);
-  const hola="hola"
     useEffect(() => {
       const fetchData = async () => {
         try {
