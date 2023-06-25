@@ -6,6 +6,8 @@ function Menu() {
     const [platos, setPlatos] = useState([]);
     const [categorias, setCategorias] = useState([]);
   
+
+    
     useEffect(() => {
       const fetchData = async () => {
         try {
