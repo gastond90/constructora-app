@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: #1f1d58;
+  }
+  
+  button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+.transition-width {
+  transition: width 0.8s ease; /* Adjust the duration and easing as needed */
+}
+
+
+
+
+

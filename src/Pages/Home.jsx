@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import NoAuthLayout from '../Layouts/NoAuthLayout';
+import grilla from '../Img/grilla.png'
 
 export default function Home() {
 
@@ -10,14 +11,13 @@ return (
         <NoAuthLayout
             showingNavigationDropdown={showingNavigationDropdown}
             setShowingNavigationDropdown={setShowingNavigationDropdown}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">{showingNavigationDropdown}</h2>}
         >
-            <div className="py-12">
-                <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                {showingNavigationDropdown === 'Inicio' && <p>HOla</p>}
-                {showingNavigationDropdown === 'Proyectos' && <p>Proyectos</p>}
-                </div>
-            </div>
+          <div className="">
+            <center className=" mx-auto ">
+            {showingNavigationDropdown === 'Inicio' && <div style={{width:"auto",height:"100vh", backgroundImage: `url(${grilla})`, backgroundSize:"contain", backgroundRepeat:"repeat-x"}}>Hola</div>}
+            {showingNavigationDropdown === 'Proyectos' && <p>Proyectos</p>}
+            </center>
+        </div>
         </NoAuthLayout>
     </>
     );
