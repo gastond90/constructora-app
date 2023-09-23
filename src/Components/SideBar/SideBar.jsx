@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./styles.css";
-import NavLink from "../NavLink";
+import logo from '../../Img/isoFortismenu.svg'
+import logo2 from '../../Img/LogoFortisblanco.png'
+import icono from '../../Img/01 ICONO F.png'
+import ButtonMenu from "../ButtonMenu";
+import Facebook from "../Facebook";
+import Insta from "../Insta";
 
-function ToggleSidebar({ showingNavigationDropdown, setShowingNavigationDropdown }) {
+function ToggleSidebar({ handleNavigation}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -11,92 +16,61 @@ function ToggleSidebar({ showingNavigationDropdown, setShowingNavigationDropdown
 
   return (
     <>
-      
-
-      {/* <div
-        id="drawer-navigation"
-        className={`fixed top-0 left-0 z-40 p-4 overflow-y-auto transition-transform bg-gris-100 ${
-          isOpen ? "w-5/12 h-screen" : "w-40 h-screen"
-        } ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
-        tabIndex="-1"
-        aria-labelledby="drawer-navigation-label"
-      > */}
       <div
         id="drawer-navigation"
-        className={`fixed top-0 left-0 z-40 overflow-y-auto transition-transform bg-gris-100 shadow-2xl ${
-          isOpen ? "w-5/12  h-screen transition-width" : "lg:w-40 w-1/5 h-screen transition-width"
+        className={`hidden sm:block fixed top-0 left-0 z-40 overflow-y-auto transition-transform bg-gris-100 shadow-2xl ${
+          isOpen ? "w-5/12 bg-rojo-100 submenu h-screen transition-width" : "lg:w-40 w-1/5 h-screen transition-width"
         }`}
         tabIndex="-1"
         aria-labelledby="drawer-navigation-label"
       >
         {isOpen ? 
         <>
-        <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-          <NavLink
-            onClick={() => setShowingNavigationDropdown("Inicio")}
-            active={showingNavigationDropdown === "Inicio"}
-          >
-            Inicio
-          </NavLink>
+        <div className="h-1/5 submenu2 items-start w-full justify-center">
+        <img src={icono} className="w-6 m-16 h-auto"/>
         </div>
-        <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-          <NavLink
-            onClick={() => setShowingNavigationDropdown("Proyectos")}
-            active={showingNavigationDropdown === "Proyectos"}
-          >
-            Proyectos
-          </NavLink>
+        <div className="h-1/5 submenu2 justify-center">
+        <img src={logo2} className="w-48 h-auto cursor-pointer" onClick={toggleSidebar}></img>
         </div>
-        <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-          <NavLink
-            onClick={() => setShowingNavigationDropdown("Contacto")}
-            active={showingNavigationDropdown === "Contacto"}
-          >
-            Contacto
-          </NavLink>
+        <div className="h-3/5 submenu2 justify-start w-2/5">
+          <ButtonMenu text={"Sobre Nosotros"} onClick={() => handleNavigation("Sobre Nosotros")}/>
+          <ButtonMenu text={"Servicios"}  onClick={() => handleNavigation("Servicios")}/>
+          <ButtonMenu text={"Obras"}  onClick={() => handleNavigation("Obras")}/>
+          <ButtonMenu text={"Contacto"}  onClick={() => handleNavigation("Contacto")}/>
+        <div className="flex justify-end mt-4">
+        <Facebook/>
+        <Insta/>
         </div>
-        <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-          <NavLink
-            onClick={() => setShowingNavigationDropdown("Sobre Nosotros")}
-            active={showingNavigationDropdown === "Sobre Nosotros"}
-          >
-            Sobre Nosotros
-          </NavLink>
         </div>
-
-        <div className="h-1/5 flex flex-col items-center justify-center">
-            <button
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 focus:outline-none"
-              type="button"
-              onClick={toggleSidebar}
-            >
-              {isOpen ? "Hide navigation" : "Show navigation"}
-            </button>
-          </div>
-        
         </>
         : 
         <div className="h-full">
-          <div className="h-1/5 flex flex-col items-center justify-center">
-
-            logo
+          <div className="h-1/5 submenu">
+            <img src={logo} className="w-12 h-auto"></img>
           </div>
-          <div className="h-3/5 flex flex-col items-center justify-center border-t border-b border-black">
-            burger
+          <div className="h-3/5 submenu border-t border-b border-black">
+          <div>
+          <button className="relative group" onClick={toggleSidebar}>
+            <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px]  ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 ">
+              <div className="flex flex-col justify-between w-[28px] h-[20px]  duration-300 origin-center overflow-hidden ">
+                <div className="bg-black h-[2px] w-16  "></div>
+                <div className="bg-black h-[2px] w-16 "></div>
+                <div className="bg-black h-[2px] w-16  "></div>
+              </div>
+            </div>
+          </button>
+        </div>
           </div>
-          <div className="h-1/5 flex flex-col items-center justify-center">
-            <button
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 focus:outline-none"
-              type="button"
-              onClick={toggleSidebar}
-            >
-              {isOpen ? "Hide navigation" : "Show navigation"}
-            </button>
+          <div className="h-1/5 submenu">
+            <p className="flecha">→</p>
           </div>
+          
         </div>
        }
         
       </div>
+
+      
     </>
   );
 }

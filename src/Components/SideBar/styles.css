@@ -15,10 +15,176 @@
   }
 
 .transition-width {
-  transition: width 0.8s ease; /* Adjust the duration and easing as needed */
+  transition: width 0.8s ease;
+}
+.transition-height {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+}
+
+.transition-height-open {
+  max-height: 1000px;
+  overflow: hidden;
+  transition: max-height 1.5s ease;
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('../../Fonts/NeuePowerTrial/NeuePowerTrial-Heavy.ttf');
+}
+@font-face {
+  font-family: 'Neue Regular';
+  src: url('../../Fonts/NeuePowerTrial/NeuePowerTrial-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Disket Mono';
+  src: url('../../Fonts/Disket-Mono-Regular.ttf');
+}
+@font-face {
+  font-family: 'Bahn';
+  src: url('../../Fonts/bahnschrift.ttf');
+}
+
+.textoNos {
+  font-family: 'Bahn'; 
+  color: white;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.tituloServicios {
+  font-family: 'Neue Regular'; 
+  color: #CF0709;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.tituloServiciosBold {
+  font-family: 'Neue'; 
+  color: #CF0709;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 0;
+  margin-top: 5px;
+}
+.tituloSobre {
+  font-family: 'Neue Regular'; 
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.tituloSobreBold {
+  font-family: 'Neue'; 
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 0;
+  margin-top: 5px;
+}
+
+.flecha {
+  font-family: 'Neue'; 
+  font-size: 2.5rem;
+}
+.flechamini {
+  font-family: 'Neue'; 
+  font-size: 1rem;
+}
+
+.textButton {
+  font-family: 'Disket Mono'; 
+ /*  font-size: 2.5rem; */
+}
+
+.submenu{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.submenu2{
+  flex-direction: column;
+  display: flex;
 }
 
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 12rem); /* Each square is 12rem wide */
+  grid-template-rows: repeat(2, 12rem); /* Each square is 4rem tall */
+  gap: 0px; /* Adjust the gap between squares */
+}
 
+.grid-item {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
 
+.pcuadrado{
+  font-family: 'Disket Mono'; 
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: start;
+  margin-top: 0.5rem;
+  text-overflow: clip !important;
+}
 
+.grid-item:nth-child(1) {
+  grid-row: 1;
+  grid-column: 1;
+  border: 2px solid black; /* Add top border to the first square */
+}
+
+.grid-item:nth-child(3) {
+  grid-row: 1;
+  grid-column: 3;
+  border: 2px solid black; /* Add top border to the third square */
+}
+
+.grid-item:nth-child(5) {
+  grid-row: 1;
+  grid-column: 5;
+  border: 2px solid black; /* Add top border to the fifth square */
+}
+
+/* Styling for the bottom line of borders */
+.grid-item:nth-child(2) {
+  grid-row: 2;
+  grid-column: 2;
+  border: 2px solid black; /* Add bottom border to the second square */
+}
+
+.grid-item:nth-child(4) {
+  grid-row: 2;
+  grid-column: 4;
+  border: 2px solid black; /* Add bottom border to the fourth square */
+}
+
+.shadow-div {
+  position: relative;
+}
+
+.shadow-div::before,
+.shadow-div::after {
+  content: "";
+  position: absolute;
+  width: 20px; /* Adjust the shadow size as needed */
+  height: 20px; /* Adjust the shadow size as needed */
+  background-color: rgba(0, 0, 0, 0.3); /* Shadow color */
+}
+
+.shadow-div::before {
+  top: 0;
+  left: 0;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.3); /* Top-left corner shadow */
+}
+
+.shadow-div::after {
+  bottom: 0;
+  right: 0;
+  box-shadow: -5px -5px rgba(0, 0, 0, 0.3); /* Bottom-right corner shadow */
+}

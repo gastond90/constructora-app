@@ -8,6 +8,12 @@ module.exports = {
       gris: {
         100: '#E5E5E5',
       },
+      rojo: {
+        100: '#CF0709',
+      },
+      azul: {
+        100: '#132932',
+      },
     }},
   },
   plugins: [],
