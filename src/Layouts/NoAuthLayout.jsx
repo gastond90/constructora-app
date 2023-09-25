@@ -24,7 +24,6 @@ export default function NoAuthLayout({handleNavigation, header, children,showing
                         <div className="shrink-0 flex items-center">
                             <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
                         </div>
-
                     </div>            
 
                     <div className={`-mr-2 flex items-center sm:hidden bg-rojo-100 ${showingNavigationDropdown ? " bg-rojo-100" : ""}`}>
@@ -58,11 +57,11 @@ export default function NoAuthLayout({handleNavigation, header, children,showing
            {/*  <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden bg-rojo-100'}> */}
 
            <div
-            className={`transition-height bg-rojo-100 shadow-xl ${
-                showingNavigationDropdown ? 'transition-height-open' : ''
+            className={`transition-height shadow-xl 'bg-rojo-100' ${
+                showingNavigationDropdown ? 'transition-height-open bg-rojo-100' : 'bg-rojo-100'
             }`}
             >
-                <div className="pt-2 pb-3 space-y-1 ml-8">
+                <div className="pt-2 pb-3 space-y-1 ml-8 'bg-rojo-100'">
                     <ButtonMenu text={"Sobre Nosotros"} onClick={() => handleNavigation("Sobre Nosotros")}/>
                     <ButtonMenu text={"Servicios"}  onClick={() => handleNavigation("Servicios")}/>
                     <ButtonMenu text={"Obras"}  onClick={() => handleNavigation("Obras")}/>

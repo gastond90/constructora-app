@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Cuadrado({text=null, img=null}) {
+function Cuadrado({text=null, img=null, width=null}) {
     return (
     <>
         <div className='w-full flex flex-col justify-start'>
@@ -13,7 +13,7 @@ function Cuadrado({text=null, img=null}) {
         </>}
         {img &&
         <center>
-        <img src={img} className="w-16"/>
+        <img src={img} alt="" className="w-16"/>
         </center>
         }
         </div>
