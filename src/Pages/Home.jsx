@@ -241,7 +241,8 @@ return (
                 
                 <div className='flex w-full justify-between'>
                 <div className='w-1/2 overflow-x-auto'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.356901544587!2d-65.41005502562398!3d-24.783229607614064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3be7de30015%3A0xaba4e219b40f40d6!2sDe%C3%A1n%20Funes%20570%2C%20A4400EDL%20Salta!5e0!3m2!1ses-419!2sar!4v1694992061911!5m2!1ses-419!2sar" width="450" height="350" /* style="border:0;" */ allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.356901544587!2d-65.41005502562398!3d-24.783229607614064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc23dc0d43c97%3A0x4a477eb300c563e4!2sFederico%20Lacroze%20982%2C%20Salta!5e0!3m2!1ses-419!2sar!4v1694992061911!5m2!1ses-419!2sar" width="450" height="350" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+
                 </div>
 
                 <div className='w-1/2 flex flex-col items-start justify-start'>
