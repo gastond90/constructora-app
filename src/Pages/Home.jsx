@@ -72,7 +72,7 @@ const [activeSection, setActiveSection] = useState("");
       title: "Hotel Salta",
       content: [
         {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-        {title:"Refacciones Varias – Zona de Cocinas", finalizada:"Enero 2023"}, 
+        {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
     ],
       
     },
@@ -80,7 +80,7 @@ const [activeSection, setActiveSection] = useState("");
       title: "Hotel Salta",
       content: [
         {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-        {title:"Refacciones Varias – Zona de Cocinas", finalizada:"Enero 2023"}, 
+        {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
     ],
       
     },
@@ -88,7 +88,7 @@ const [activeSection, setActiveSection] = useState("");
       title: "Hotel Salta",
       content: [
         {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-        {title:"Refacciones Varias – Zona de Cocinas", finalizada:"Enero 2023"}, 
+        {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
     ],
       
     },
@@ -96,7 +96,7 @@ const [activeSection, setActiveSection] = useState("");
       title: "Hotel Salta",
       content: [
         {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-        {title:"Refacciones Varias – Zona de Cocinas", finalizada:"Enero 2023"}, 
+        {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
     ],
       
     },
@@ -104,7 +104,7 @@ const [activeSection, setActiveSection] = useState("");
       title: "Hotel Salta",
       content: [
         {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-        {title:"Refacciones Varias – Zona de Cocinas", finalizada:"Enero 2023"}, 
+        {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
     ],
       
     },
@@ -112,7 +112,7 @@ const [activeSection, setActiveSection] = useState("");
       title: "Hotel Salta",
       content: [
         {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-        {title:"Refacciones Varias – Zona de Cocinas", finalizada:"Enero 2023"}, 
+        {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
     ],
       
     },
@@ -120,7 +120,7 @@ const [activeSection, setActiveSection] = useState("");
       title: "Hotel Salta",
       content: [
         {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-        {title:"Refacciones Varias – Zona de Cocinas", finalizada:"Enero 2023"}, 
+        {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
     ],
       
     },
@@ -128,7 +128,7 @@ const [activeSection, setActiveSection] = useState("");
       title: "Hotel Salta",
       content: [
         {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-        {title:"Refacciones Varias – Zona de Cocinas", finalizada:"Enero 2023"}, 
+        {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
     ],
       
     },
@@ -136,7 +136,7 @@ const [activeSection, setActiveSection] = useState("");
       title: "Hotel Salta",
       content: [
         {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-        {title:"Refacciones Varias – Zona de Cocinas", finalizada:"Enero 2023"}, 
+        {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
     ],
       
     },
