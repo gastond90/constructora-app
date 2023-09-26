@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NoAuthLayout from '../Layouts/NoAuthLayout';
 import grilla from '../Img/grilla.png'
+import fondonos from '../Img/fondonosotros.png'
 import fondoportada from '../Img/foto.png'
 import CASCOOBRA from '../Img/CASCO OBRA.png'
 import TIULOOBRA from '../Img/TITULO OBRA.png'
@@ -150,7 +151,7 @@ return (
             setShowingNavigationDropdown={setShowingNavigationDropdown}
             handleNavigation={handleNavigation}
         >
-            <div id="Inicio" style={{width:"auto",height:"100vh", backgroundImage: `url(${grilla})`, backgroundSize:"contain", backgroundRepeat:"repeat-x"}}>
+            <div id="Inicio" style={{width:"auto",height:"100vh", backgroundImage: `url(${grilla})`, backgroundSize:"contain", backgroundRepeat:"repeat-x"}} className='mx-auto'>
                 <div className='flex justify-end pr-4 sm:pr-8'>
                     <Salta/>
                 </div>
@@ -158,16 +159,16 @@ return (
                     <img src={fortisLogo} alt="" className="w-32"/>
                 </div>
                 <div className='flex justify-start'>
-                    <img src={fondoportada} alt="" className="lg:pl-40"/>
+                    <img src={fondoportada} alt="" /* className="lg:pl-40" *//>
                 </div>
             </div>
-            <div id="Sobre Nosotros" className='bg-rojo-100 lg:pl-64' style={{width:"auto",maxHeight:"100vh",height:"100vh", overflowY:'auto'}}>
-                <div className='flex flex-col items-start justify-start my-2 pt-8 sm:pt-32 ml-8 sm:ml-0'>
+            <div id="Sobre Nosotros" /* className='lg:pl-64' */ style={{width:"auto",maxHeight:"100vh",height:"100vh", overflowY:'auto',backgroundImage: `url(${fondonos})`}}>
+                <div className='flex flex-col items-start justify-start my-2 pt-8 sm:pt-32 ml-8'>
                     <p className='tituloSobre'>SOBRE</p>
                     <p className='tituloSobreBold'>NOSOTROS</p>
                 </div>
                 <div className='flex mt-8 justify-between'>
-                    <div className='flex flex-col w-1/5 sm:w-1/3 justify-start items-start'>
+                    <div className='flex flex-col w-1/5 sm:w-1/3 justify-start items-start ml-8 mt-8'>
                         <img src={flecha} alt="" className="w-8"/>
                     </div>
                     <div className='flex flex-col w-4/5 sm:w-2/3 justify-start pr-16 mr-0 sm:mr-16'>
@@ -185,9 +186,9 @@ return (
                     </div>
                 </div>
             </div>
-            <div id="Servicios" className='lg:pl-16 lg:h-screen p-4'
+            <div id="Servicios" className='lg:h-screen p-4'
                 style={{
-                    width: "auto",
+                  /*   width: "auto", */
                     minHeight: "100vh",
                     boxShadow: "inset 5px 5px 40px rgba(0, 0, 0, 0.3), inset -5px -5px 40px rgba(0, 0, 0, 0.3)",
                 }}
@@ -197,8 +198,8 @@ return (
                     <p className='tituloServiciosBold'>SERVICIOS</p>
                 </div>
                 
-                <center>
-                    <div className="grid-container lg:pl-52">
+                <div className='flex sm:justify-center'>
+                    <div className="grid-container">
                       <div className="grid-item"><Cuadrado text={"Análisis Y Armado De Proyectos"}/></div>
                       <div className="grid-item"><Cuadrado text={"Obras De Arquitectura"}/></div>
                       <div className="grid-item"><Cuadrado text={"Obras De Infraestructura Y Saneamiento"}/></div>
@@ -210,16 +211,16 @@ return (
                       <div className="grid-item"><Cuadrado img={grua}/></div>
                       <div className="grid-item"><Cuadrado img={F}/></div>
                     </div>
-                </center>
+                </div>
             </div>
             <div id="Obras" className='bg-azul-100' style={{width:"auto",maxHeight:"100vh"/* ,height:"100vh" */}}>
-                <div className='flex w-full justify-between pl-16 pt-16'>
-                    <div className="w-1/2 mx-auto flex flex-col items-center">
+                <div className='flex w-full justify-between pt-16'>
+                    <div className="w-1/3 mx-auto flex flex-col items-center">
                         <img src={TIULOOBRA} alt="" className="w-40"/>
                         <img src={CASCOOBRA} alt="" className="w-80"/>
                     </div>
 
-                    <div className="w-1/2 mx-auto flex flex-col pr-8" style={{maxHeight:"80vh", overflowY:'auto'}}>
+                    <div className="w-2/3 mx-auto" style={{maxHeight:"80vh", overflowY:'auto'}}>
                         {accordionItemsData.map((item, index) => (
                             <AccordionItem
                             key={index}
@@ -233,14 +234,14 @@ return (
                 </div>
                 <img src={banda} alt="" className="pb-4 w-full"/>
             </div>
-            <div id="Contacto" className='pl-8 sm:pl-44' style={{width:"auto",height:"100vh", backgroundImage: `url(${fondocontacto})`, backgroundSize:"cover", /* backgroundRepeat:"repeat-x" */}}>
+            <div id="Contacto" /* className='pl-8 sm:pl-44' */ style={{width:"auto",height:"100vh", backgroundImage: `url(${fondocontacto})`, backgroundSize:"cover", /* backgroundRepeat:"repeat-x" */}}>
                 
-                <div className='flex justify-start pt-32 mb-9'>
+                <div className='flex justify-center pt-32 mb-9 w-1/5'>
                     <img src={fortisLogoBlanco} alt="" className="w-32"/>
                 </div>
                 
                 <div className='flex w-full justify-between'>
-                <div className='w-1/2 overflow-x-auto'>
+                <div className='w-1/2 overflow-x-auto pl-8'>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.356901544587!2d-65.41005502562398!3d-24.783229607614064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc23dc0d43c97%3A0x4a477eb300c563e4!2sFederico%20Lacroze%20982%2C%20Salta!5e0!3m2!1ses-419!2sar!4v1694992061911!5m2!1ses-419!2sar" width="450" height="350" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
@@ -256,41 +257,29 @@ return (
                 <p className='pcontacto ' style={{fontSize:"0.9rem"}}>
                   INSTAGRAM <span style={{ fontWeight:"bolder"}}> FORTIS.SRL</span> 
                 </p>
-
                 <img src={flechaBlanca} alt="" className="w-24 py-8"/>
                 <img src={evo} alt="" className="w-44 pl-8"/>
-
                 </div>
-
-                
-
                 </div>
-
-               
-
-                
-                
             </div>
 
             <div id="footer" className='bg-rojo-100' style={{width:"auto",height:"25vh"}}>
-               <div className='w-full h-full flex items-center pl-60'>
-
-                  <div className='flex w-1/3 justify-start'>
-                  <p className='pcontacto pr-4' style={{fontSize:"0.9rem", fontWeight:"bolder"}}>
-                    seguinos  
-                  </p>
-                  <Facebook/>
-                  <Insta/>
+               <div className='w-full h-full flex items-center flex-col sm:flex-row justify-evenly'>
+                  <div className='flex h-1/3 sm:w-1/3 sm:justify-center items-center flex-row'>
+                    <p className='pcontacto pr-4' style={{fontSize:"0.9rem", fontWeight:"bolder"}}>
+                      seguinos  
+                    </p>
+                    <Facebook/>
+                    <Insta/>
                   </div>
-                  <div className='flex w-1/3'>
-                  <img src={fortisLogoBlanco} alt="" className="w-44"/>
+                  <div className='flex sm:w-1/3 sm:justify-center'>
+                    <img src={fortisLogoBlanco} alt="" className="w-44"/>
                   </div>
-                  <div className='flex w-1/3 justify-center'>
-                  <p className='pcontacto' style={{fontSize:"0.9rem", fontWeight:"bolder"}}>
-                    → HABLEMOS!
-                  </p>
+                  <div className='flex h-1/3 sm:w-1/3 sm:justify-center sm:justify-start items-center'>
+                    <p className='pcontacto' style={{fontSize:"0.9rem", fontWeight:"bolder"}}>
+                      → HABLEMOS!
+                    </p>
                   </div>
-
                </div>
             </div>
         </NoAuthLayout>

@@ -19,7 +19,7 @@ function ToggleSidebar({ handleNavigation}) {
       <div
         id="drawer-navigation"
         className={`hidden sm:block fixed top-0 left-0 z-40 overflow-y-auto transition-transform bg-gris-100 shadow-2xl ${
-          isOpen ? "w-5/12 bg-rojo-100 submenu h-screen transition-width" : "lg:w-40 w-1/5 h-screen transition-width"
+          isOpen ? "w-5/12 bg-rojo-100 submenu h-screen transition-width" : "sm:w-1/18-screen w-1/5 h-screen transition-width"
         }`}
         tabIndex="-1"
         aria-labelledby="drawer-navigation-label"

@@ -14,7 +14,7 @@ export default function NoAuthLayout({handleNavigation, header, children,showing
     };
 
     return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen overflow-x-hidden" style={{maxWidth:"100vw"}}>
         <nav className="bg-white border-b border-gray-100 block sm:hidden bg-rojo-100 shadow-m">
             <div className="max-w-7xl mx-auto">
                 <div className={`flex justify-between h-16 bg-rojo-100 ${
@@ -68,16 +68,10 @@ export default function NoAuthLayout({handleNavigation, header, children,showing
                     <ButtonMenu text={"Contacto"}  onClick={() => handleNavigation("Contacto")}/>
                 </div>
             </div>
-            </nav>
-    <ToggleSidebar handleNavigation={handleNavigation} showingNavigationDropdown={showingNavigationDropdown} setShowingNavigationDropdown={setShowingNavigationDropdown}/>
+        </nav>
+        <ToggleSidebar handleNavigation={handleNavigation} showingNavigationDropdown={showingNavigationDropdown} setShowingNavigationDropdown={setShowingNavigationDropdown}/>
 
-    {header && (
-        <header className="bg-white shadow">
-            <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">{header}</div>
-        </header>
-    )}
-
-    <main>{children}</main>
+        <main className='sm:ml-1/18-screen' /* className="mx-10%" */ /* style={{marginLeft:"160px"}} */>{children}</main>
     </div>
     );
 }
