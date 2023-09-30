@@ -1,5 +1,3 @@
-import ResponsiveNavLink from '../Components/ResponsiveNavLink';
-import NavLink from '../Components/NavLink';
 import ApplicationLogo from '../Components/ApplicationLogo';
 import ToggleSidebar from '../Components/SideBar/SideBar';
 import { useState } from 'react';
@@ -71,7 +69,7 @@ export default function NoAuthLayout({handleNavigation, header, children,showing
         </nav>
         <ToggleSidebar handleNavigation={handleNavigation} showingNavigationDropdown={showingNavigationDropdown} setShowingNavigationDropdown={setShowingNavigationDropdown}/>
 
-        <main className='sm:ml-1/18-screen' /* className="mx-10%" */ /* style={{marginLeft:"160px"}} */>{children}</main>
+        <main className='sm:ml-1/18-screen'>{children}</main>
     </div>
     );
 }
