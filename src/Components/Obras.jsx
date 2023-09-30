@@ -9,18 +9,19 @@ function AccordionItem({ title, content, isOpen, onToggle }) {
     const toggleAccordion = () => {
         onToggle(!isOpen);
     };
-    
     return (
-    <div className={`transition w-3/4 ${isOpen ? 'bg-white' : ''} ${isOpen ? 'text-rojo-100' : 'text-white'}`}>
-        <div className={`hover:bg-white hover:text-rojo-100 accordion-header cursor-pointer transition flex justify-between space-x-5 px-12 items-center h-10  border-b border-white`} onClick={toggleAccordion}>
+        <div className={`transition w-3/4 accordion-item ${isOpen ? 'bg-white' : ''} ${isOpen ? 'text-rojo-100' : 'text-white'}`}>
+    {/* <div className={`transition w-3/4 ${isOpen ? 'bg-white' : ''} ${isOpen ? 'text-rojo-100' : 'text-white'}`}> */}
+
+        <div className={`w-full hover:bg-white hover:text-rojo-100 accordion-header cursor-pointer transition flex justify-between space-x-5 px-12 items-center h-10  border-b border-white`} onClick={toggleAccordion}>
             <h3 className={`tituloObra hover:text-rojo-100 ${isOpen ? 'text-rojo-100' : ''}`}>{title}</h3>
             <p className='tituloObra pr-8'>{isOpen ? '-' : '+'}</p>
         </div>
-        <div className={`bg-gray-700 text-white border-b border-white accordion-content pt-8 px-10 overflow-hidden ${isOpen ? 'max-h-full' : 'max-h-0 hidden'}`}>
+        <div className={`w-full bg-gray-700 text-white border-b border-white accordion-content pt-8 px-10 overflow-hidden ${isOpen ? 'max-h-full' : 'max-h-0 hidden'}`}>
             {content.map((e, index) => (
                 <div key={index} className='flex flex-col items-start justify-center py-2 pl-2'>
                     <p className="detalleObra text-start font-bold">{e.title}</p>
-                    <p className="detalleObra text-start">Obra finalizada {e.finalizada}</p>
+                    <p className="detalleObra text-start">{e.finalizada? "Obra finalizada " + e.finalizada :"Obra en ejecución" }</p>
                 </div>
             ))}
         </div>
@@ -39,10 +40,11 @@ if (openItemIndex === index) {
 
 const accordionItemsData = [
 {
-    title: "Hotel Salta",
+    title: "Aeropuerto Salta (AA2000)",
     content: [
-    {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-    {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
+    {title:"Construcción de nuevas rentadoras Low Cost", finalizada:"Agosto 2022"}, 
+    {title:"Refacción de alcantarillas en zona de pista de aterrizaje", finalizada:"Enero 2023"}, 
+    {title:"Remodelación Sala Vip Aeropuerto Salta", finalizada:""}, 
 ],
     
 },
@@ -55,58 +57,48 @@ const accordionItemsData = [
     
 },
 {
-    title: "Hotel Salta",
+    title: "MEBAC - Tienda de Informática",
     content: [
-    {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-    {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
+    {title:"Construcción de nuevo depósito y oficinas administrativas", finalizada:"Mayo 2023"}, 
+     
+],
+},
+
+{
+    title: "Proyecto Conectar Salta 1 - convenio con Saltic S.E.",
+    content: [
+    {title:"Instalación de shelters y de fibra óptica que amplía la conectividad para las provincias de Salta, Jujuy y Tucumán", finalizada:"Junio 2023"}, 
 ],
     
 },
 {
-    title: "Hotel Salta",
+    title: "Fernando Yarade y Asociados S.R.L.",
     content: [
-    {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-    {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
+    {title:"Refacciones varias", finalizada:"Noviembre 2022"}, 
+    {title:"Refacciones Varias -  Consultora Pluss", finalizada:"Julio 2023"}, 
 ],
     
 },
 {
-    title: "Hotel Salta",
+    title: "INVLAC Construcciones SRL",
     content: [
-    {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-    {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
+    {title:"Construcción de Vivienda Unifamiliar. Vivienda Cernusco. Salta Capital, Barrio Privado La Reserva. 327,5 m2", finalizada:""}, 
+    {title:"Construcción de Vivienda Unifamiliar. Vivienda Leyton. Salta Capital, Barrio La Trinidad 176,8 m2", finalizada:""}, 
+    {title:"Construcción de Vivienda Unifamiliar. Estancia Ivael. Salta Chicoana. 365 m2", finalizada:"Agosto 2023"}, 
 ],
     
 },
 {
-    title: "Hotel Salta",
+    title: "Seil Engineering",
     content: [
-    {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-    {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
+    {title:"Cerramiento nave Industrial Proyecto Posco Downstream", finalizada:""}, , 
 ],
     
 },
 {
-    title: "Hotel Salta",
+    title: "Weiss Salta SAS",
     content: [
-    {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-    {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
-],
-    
-},
-{
-    title: "Hotel Salta",
-    content: [
-    {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-    {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
-],
-    
-},
-{
-    title: "Hotel Salta",
-    content: [
-    {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
-    {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
+    {title:"Construcción local comercial. Salta Capital. 210 m2", finalizada:""}, 
 ],
     
 },
@@ -114,15 +106,15 @@ const accordionItemsData = [
 ]; 
 
 return (
-<div id="Obras" className='bg-azul-100' style={{width:"auto",maxHeight:"100vh"/* ,height:"100vh" */}}>
+<div id="Obras" className='bg-azul-100' style={{width:"auto",maxHeight:"100vh"}}>
     <div className='flex w-full justify-between pt-16'>
-        <div className="w-1/2 mx-auto flex flex-col items-center">
+        <div className="w-1/3 flex flex-col items-center">
             <img src={TIULOOBRA} alt="" className="w-40"/>
             <img src={CASCOOBRA} alt="" className="w-80"/>
         </div>
 
-        <div className="w-1/2 mx-auto flex flex-col justify-center" /* style={{maxHeight:"60vh", overflowY:'auto'}} */>
-            <div style={{maxHeight:"60vh", overflowY:'auto'}}>
+        <div className="w-2/3 flex flex-col justify-center items-center">
+            <div style={{maxHeight:"60vh", overflowY:'auto'}} /* className='flex flex-col items-center' */>
             {accordionItemsData.map((item, index) => (
                 <AccordionItem
                     key={index}

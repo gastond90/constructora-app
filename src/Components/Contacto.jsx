@@ -17,7 +17,7 @@ function Contacto() {
 
             <div className='w-1/2 flex flex-col items-start justify-start'>
                 <p className='pcontacto' style={{fontSize:"1.5rem", fontWeight:"bolder"}}>
-                    CONTACTO
+                    HABLEMOS
                 </p>
                 <p className='pcontacto' style={{fontSize:"0.9rem", fontWeight:"bolder"}}>
                     +3875 32-6762

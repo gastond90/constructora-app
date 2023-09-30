@@ -7,8 +7,8 @@ import F from '../Img/01 ICONO F.png'
 
 function Servicios() {
     return ( 
-    <div id="Servicios" className='lg:h-screen p-4'style={{minHeight: "100vh"}}>
-            <div className='py-16'>
+    <div id="Servicios" className='lg:h-screen'style={{minHeight: "100vh"}}>
+            <div className='pt-16 pb-24'>
                 <p className='tituloServicios'>NUESTROS</p>
                 <p className='tituloServiciosBold'>SERVICIOS</p>
             </div>
