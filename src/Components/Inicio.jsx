@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Salta from './Salta';
 import grilla from '../Img/grilla.png'
 import fortisLogo from '../Img/fortispalabra.svg'

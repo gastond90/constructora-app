@@ -3,19 +3,17 @@ import ToggleSidebar from '../Components/SideBar/SideBar';
 import { useState } from 'react';
 import "../Components/SideBar/styles.css";
 import ButtonMenu from '../Components/ButtonMenu';
+import ShadeScreen from '../Components/ShadeScreen';
 
-export default function NoAuthLayout({handleNavigation, header, children,showingNavigationDropdown, setShowingNavigationDropdown }) {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleSidebar = () => {
-      setIsOpen(!isOpen);
-    };
-
+export default function NoAuthLayout({handleNavigation, isOpen,setIsOpen, children,showingNavigationDropdown, setShowingNavigationDropdown }) {
+    
+const toggleSidebar = () => {setIsOpen(!isOpen)};
     return (
     <div className="min-h-screen overflow-x-hidden" style={{maxWidth:"100vw"}}>
-        <nav className="bg-white border-b border-gray-100 block sm:hidden bg-rojo-100 shadow-m">
-            <div className="max-w-7xl mx-auto">
-                <div className={`flex justify-between h-16 bg-rojo-100 ${
+        {isOpen && <ShadeScreen toggleSidebar={toggleSidebar}/>}
+        <nav className="bg-white border-b border-gray-100 block sm:hidden bg-rojo-100 shadow-m fixed top-0 left-0 z-50 w-full">
+            <div className="mx-auto">
+                <div className={`sticky top-0 flex justify-between h-16 bg-rojo-100 ${
                 showingNavigationDropdown ? " bg-rojo-100" : ""
                 }` } >
                     <div className="flex">
@@ -51,15 +49,12 @@ export default function NoAuthLayout({handleNavigation, header, children,showing
                     </div>
                 </div>
             </div>
-
-           {/*  <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden bg-rojo-100'}> */}
-
            <div
             className={`transition-height shadow-xl 'bg-rojo-100' ${
-                showingNavigationDropdown ? 'transition-height-open bg-rojo-100' : 'bg-rojo-100'
+                showingNavigationDropdown ? 'transition-height-open bg-rojo-100 ' : 'bg-rojo-100'
             }`}
             >
-                <div className="pt-2 pb-3 space-y-1 ml-8 'bg-rojo-100'">
+                <div className="pb-3 space-y-1 ml-8 'bg-rojo-100'">
                     <ButtonMenu text={"Sobre Nosotros"} onClick={() => handleNavigation("Sobre Nosotros")}/>
                     <ButtonMenu text={"Servicios"}  onClick={() => handleNavigation("Servicios")}/>
                     <ButtonMenu text={"Obras"}  onClick={() => handleNavigation("Obras")}/>
@@ -67,7 +62,8 @@ export default function NoAuthLayout({handleNavigation, header, children,showing
                 </div>
             </div>
         </nav>
-        <ToggleSidebar handleNavigation={handleNavigation} showingNavigationDropdown={showingNavigationDropdown} setShowingNavigationDropdown={setShowingNavigationDropdown}/>
+        
+       <ToggleSidebar isOpen={isOpen} setIsOpen={setIsOpen} handleNavigation={handleNavigation} showingNavigationDropdown={showingNavigationDropdown} setShowingNavigationDropdown={setShowingNavigationDropdown}/>
 
         <main className='sm:ml-1/18-screen'>{children}</main>
     </div>

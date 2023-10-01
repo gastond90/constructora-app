@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles.css";
 import logo from '../../Img/isoFortismenu.svg'
 import logo2 from '../../Img/LogoFortisblanco.png'
@@ -7,22 +7,20 @@ import ButtonMenu from "../ButtonMenu";
 import Facebook from "../Facebook";
 import Insta from "../Insta";
 
-function ToggleSidebar({ handleNavigation}) {
-  const [isOpen, setIsOpen] = useState(false);
+function ToggleSidebar({ handleNavigation, isOpen, setIsOpen}) {
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleSidebar = () => {setIsOpen(!isOpen);};
 
   return (
     <>
       <div
         id="drawer-navigation"
-        className={`hidden sm:block fixed top-0 left-0 z-40 overflow-y-auto transition-transform bg-gris-100 shadow-2xl ${
+        className={`hidden sm:block fixed top-0 left-0 overflow-y-auto transition-transform bg-gris-100 shadow-2xl ${
           isOpen ? "w-5/12 bg-rojo-100 submenu h-screen transition-width" : "sm:w-1/18-screen w-1/5 h-screen transition-width"
         }`}
         tabIndex="-1"
         aria-labelledby="drawer-navigation-label"
+        style={{zIndex: "200"}}
       >
         {isOpen ? 
         <>

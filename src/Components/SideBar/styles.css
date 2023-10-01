@@ -6,7 +6,11 @@
     margin: 0;
    /*  background: #1f1d58; */
   }
-  
+  .barra {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
   button {
     background: transparent;
     border: 0;
@@ -316,4 +320,18 @@ div::-webkit-scrollbar-thumb {
 
 .accordion-item {
   width: 50vw; /* Adjust the width as per your design */
+}
+
+
+.shade-screen-container{
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* width: 57.5vw; */
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: black;
+  opacity: 0.4;
 }
