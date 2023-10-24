@@ -6,11 +6,25 @@
     margin: 0;
    /*  background: #1f1d58; */
   }
-  .barra {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+
+  @font-face {
+    font-family: 'Neue';
+    src: url('../../Fonts/NeuePowerTrial/NeuePowerTrial-Heavy.ttf');
   }
+  @font-face {
+    font-family: 'Neue Regular';
+    src: url('../../Fonts/NeuePowerTrial/NeuePowerTrial-Light.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Disket Mono';
+    src: url('../../Fonts/Disket-Mono-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Bahn';
+    src: url('../../Fonts/bahnschrift.ttf');
+  }
+
   button {
     background: transparent;
     border: 0;
@@ -26,29 +40,10 @@
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
-
 .transition-height-open {
   max-height: 1000px;
   overflow: hidden;
   transition: max-height 0.5s ease;
-}
-
-@font-face {
-  font-family: 'Neue';
-  src: url('../../Fonts/NeuePowerTrial/NeuePowerTrial-Heavy.ttf');
-}
-@font-face {
-  font-family: 'Neue Regular';
-  src: url('../../Fonts/NeuePowerTrial/NeuePowerTrial-Light.ttf');
-}
-
-@font-face {
-  font-family: 'Disket Mono';
-  src: url('../../Fonts/Disket-Mono-Regular.ttf');
-}
-@font-face {
-  font-family: 'Bahn';
-  src: url('../../Fonts/bahnschrift.ttf');
 }
 
 .textoNos {
@@ -274,33 +269,6 @@
   }
 }
 
-
-.shadow-div {
-  position: relative;
-}
-
-.shadow-div::before,
-.shadow-div::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: rgba(0, 0, 0, 0.3); /* Shadow color */
-}
-
-.shadow-div::before {
-  top: 0;
-  left: 0;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.3); /* Top-left corner shadow */
-}
-
-.shadow-div::after {
-  bottom: 0;
-  right: 0;
-  box-shadow: -5px -5px rgba(0, 0, 0, 0.3); /* Bottom-right corner shadow */
-}
-
-
 /* Hide the scrollbar */
 div::-webkit-scrollbar {
   width: 0.5rem; /* You can adjust the width to your preference */
@@ -318,9 +286,7 @@ div::-webkit-scrollbar-thumb {
   border-radius: 0.25rem; /* Optional: Add some border-radius for a more subtle look */
 }
 
-.accordion-item {
-  width: 50vw; /* Adjust the width as per your design */
-}
+.accordion-item { width: 50vw}
 
 
 .shade-screen-container{
@@ -335,3 +301,81 @@ div::-webkit-scrollbar-thumb {
   background-color: black;
   opacity: 0.4;
 }
+
+
+section {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+article {
+  position: relative;
+  overflow: hidden;
+  width: 64px;
+  height: 500px;
+  border-radius: 36px;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0.9;
+  transition: 0.5s;
+  font-family: 'Bahn'; 
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+article h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(255 255 255 / 96%);
+}
+
+article p {
+  color: rgb(255 255 255 / 66%);
+}
+
+article.active {
+  width: 400px;
+  opacity: 1;
+}
+
+
+article .content {
+  position: absolute;
+/*   bottom: 0; */
+  left: 0;
+  width: 400px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  padding: 100px 0 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 80%));
+  transition: 0.25s;
+  height: 100%
+}
+
+article.active .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+article img {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 150%;
+  filter: grayscale(0.5);
+}
+
+@media (max-width: 767px) {
+  article.active {
+    width: 95%;
+  }}

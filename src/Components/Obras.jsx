@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CASCOOBRA from '../Img/CASCO OBRA.png'
 import TIULOOBRA from '../Img/TITULO OBRA.png'
 import banda from '../Img/banda_1.gif'
+import { Accordion } from './accordion-2/Accordion';
 
 function Obras() {
 
@@ -107,14 +108,15 @@ const accordionItemsData = [
 
 return (
 <div id="Obras" className='bg-azul-100' style={{width:"auto",maxHeight:"100vh"}}>
-    <div className='flex w-full justify-between pt-16'>
-        <div className="w-1/3 flex flex-col items-center">
+   {/*  <div className='flex w-full justify-between pt-16'> */}
+    <div className='flex w-full justify-center items-center pt-16'>
+        {/* <div className="w-1/3 flex flex-col items-center">
             <img src={TIULOOBRA} alt="" className="w-40"/>
             <img src={CASCOOBRA} alt="" className="w-80"/>
-        </div>
-
+        </div> */}
+{/* 
         <div className="w-2/3 flex flex-col justify-center items-center">
-            <div style={{maxHeight:"60vh", overflowY:'auto'}} /* className='flex flex-col items-center' */>
+            <div style={{maxHeight:"60vh", overflowY:'auto'}}>
             {accordionItemsData.map((item, index) => (
                 <AccordionItem
                     key={index}
@@ -125,8 +127,9 @@ return (
                 />
             ))}    
             </div>
-                           
-        </div>
+        </div> */}
+        <Accordion/>
+
     </div>
     <img src={banda} alt="" className="pb-4 w-full"/>
 </div>
