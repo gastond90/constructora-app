@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CASCOOBRA from '../Img/CASCO OBRA.png'
 import TIULOOBRA from '../Img/TITULO OBRA.png'
+import fondo from '../Img/fondo-obra.png'
 import banda from '../Img/banda_1.gif'
 import { Accordion } from './accordion-2/Accordion';
 
@@ -107,14 +108,17 @@ const accordionItemsData = [
 ]; 
 
 return (
-<div id="Obras" className='bg-azul-100' style={{width:"auto",maxHeight:"100vh"}}>
-   {/*  <div className='flex w-full justify-between pt-16'> */}
-    <div className='flex w-full justify-center items-center pt-16'>
-        {/* <div className="w-1/3 flex flex-col items-center">
+    <>
+    
+<div id="Obras" style={{width:"auto",maxHeight:"100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover",width:"100vw"
+}}>
+   {/* <div className='flex w-full justify-between pt-16'> */}
+    <div className='flex w-full justify-center items-center pt-16' >
+        <div className="w-1/3 flex flex-col items-center" >
             <img src={TIULOOBRA} alt="" className="w-40"/>
             <img src={CASCOOBRA} alt="" className="w-80"/>
-        </div> */}
-{/* 
+        </div>
+
         <div className="w-2/3 flex flex-col justify-center items-center">
             <div style={{maxHeight:"60vh", overflowY:'auto'}}>
             {accordionItemsData.map((item, index) => (
@@ -127,12 +131,23 @@ return (
                 />
             ))}    
             </div>
-        </div> */}
-        <Accordion/>
-
+        </div>
+        {/* <Accordion/> */}
     </div>
+
     <img src={banda} alt="" className="pb-4 w-full"/>
 </div>
+<div id="Obras" style={{width:"auto",/* maxHeight:"100vh", *//* backgroundImage: `url(${fondo})`, backgroundSize:"cover",width:"100vw" */
+}}>
+   <div className='flex w-full justify-center pt-16 bg-azul-100 py-16 mt-8'>
+   
+        <Accordion/>
+    </div>
+
+    <img src={banda} alt="" className="pb-4 w-full h-16"/>
+</div>
+
+</>
 );}
 
 export default Obras;

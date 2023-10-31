@@ -4,7 +4,7 @@ import flecha from '../Img/flecha.png'
 
 function Nosotros() {
 return ( 
-<div id="Sobre Nosotros" className='flex justify-center' style={{width:"auto",maxHeight:"100vh",height:"100vh", overflowY:'auto',backgroundImage: `url(${fondonos})`}}>
+<div id="Sobre Nosotros" className='flex justify-center' style={{width:"auto",maxHeight:"100vh",height:"100vh", overflowY:'auto',backgroundImage: `url(${fondonos})`, backgroundSize:"cover"}}>
     <div className='w-2/3'>
         <div className='flex flex-col items-start justify-start my-2 pt-8 sm:pt-20 ml-8'>
             <p className='tituloSobre'>SOBRE</p>
