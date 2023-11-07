@@ -13,7 +13,7 @@ function Cuadrado({text=null, img=null, width=null}) {
         </>}
         {img &&
         <center>
-        <img src={img} alt="" className="w-16"/>
+        <img src={img} alt="" className="w-12"/>
         </center>
         }
         </div>

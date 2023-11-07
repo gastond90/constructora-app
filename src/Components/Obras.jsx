@@ -110,9 +110,8 @@ const accordionItemsData = [
 return (
     <>
     
-<div id="Obras" style={{width:"auto",maxHeight:"100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover",width:"100vw"
+{/* <div id="Obras" style={{width:"auto",maxHeight:"100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover",width:"100vw"
 }}>
-   {/* <div className='flex w-full justify-between pt-16'> */}
     <div className='flex w-full justify-center items-center pt-16' >
         <div className="w-1/3 flex flex-col items-center" >
             <img src={TIULOOBRA} alt="" className="w-40"/>
@@ -132,19 +131,28 @@ return (
             ))}    
             </div>
         </div>
-        {/* <Accordion/> */}
     </div>
 
     <img src={banda} alt="" className="pb-4 w-full"/>
+</div> */}
+<div id="Obras" style={{width:"auto"}}>
+   <div className='flex flex-col items-center w-full justify-center bg-azul-100 py-16 mt-8 px-32'>
+   <img src={CASCOOBRA} alt="" className="w-60"/>
+
+<div className='flex items-center w-full justify-between'>
+    <div className='flex justify-start'>
+    <p className='tituloObras'>OBRAS</p>
+    </div>
+    
+   <div className='flex'>
+    <Accordion/>
+   </div>
 </div>
-<div id="Obras" style={{width:"auto",/* maxHeight:"100vh", *//* backgroundImage: `url(${fondo})`, backgroundSize:"cover",width:"100vw" */
-}}>
-   <div className='flex w-full justify-center pt-16 bg-azul-100 py-16 mt-8'>
    
-        <Accordion/>
+       
     </div>
 
-    <img src={banda} alt="" className="pb-4 w-full h-16"/>
+   {/*  <img src={banda} alt="" className="pb-4 w-full h-16"/> */}
 </div>
 
 </>
