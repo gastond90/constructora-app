@@ -164,8 +164,9 @@
 .pcontacto{
   font-family: 'Neue'; 
   text-align: start;
-  color: white;
+  color: #CF0709;
   text-overflow: clip !important;
+  margin-top: 8rem;
 }
 
 .grid-item:nth-child(1) {
@@ -392,4 +393,35 @@ article img {
     transform: rotate(-90deg);
    /*  margin-right: 3rem; */
     /* height: 1rem */
+  }
+
+  .enviar{
+    color: white; 
+    background-color: #CF0709; 
+    padding: 0.5rem; 
+    width: 6rem; 
+    height: 2.5rem;  
+    font-family: 
+    'Disket Mono'; 
+    font-size: 11px;
+    font-weight: bolder;
+  margin-bottom: 1rem;}
+
+  .contactos{
+    font-family: 'Disket Mono';
+    font-size: 12px;
+    font-weight: bold;
+    display:flex;
+  }
+  .footers{
+    font-family: 'Neue Regular';
+    font-size: 13px;
+    display:flex;
+    color: white;
+    cursor: pointer;
+  }
+
+  .input{
+    border: 1px solid darkgray;
+    font-family: 'Bahn';
   }

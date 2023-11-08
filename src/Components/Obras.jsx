@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import CASCOOBRA from '../Img/CASCO OBRA.png'
 import TIULOOBRA from '../Img/TITULO OBRA.png'
 import fondo from '../Img/fondo-obra.png'
-import banda from '../Img/banda_1.gif'
 import { Accordion } from './accordion-2/Accordion';
 
 function Obras() {
@@ -135,20 +134,18 @@ return (
 
     <img src={banda} alt="" className="pb-4 w-full"/>
 </div> */}
-<div id="Obras" style={{width:"auto"}}>
-   <div className='flex flex-col items-center w-full justify-center bg-azul-100 py-16 mt-8 px-32'>
-   <img src={CASCOOBRA} alt="" className="w-60"/>
+    <div id="Obras" style={{width:"auto"}}>
+    <div className='flex flex-col items-center w-full justify-center bg-azul-100 py-16 px-32' >
+        <img src={CASCOOBRA} alt="" className="w-60"/>
 
-<div className='flex items-center w-full justify-between'>
-    <div className='flex justify-start'>
-    <p className='tituloObras'>OBRAS</p>
+    <div className='flex items-center justify-between'>
+        <div className='flex justify-start'>
+            <p className='tituloObras'>OBRAS</p>
+        </div>
+        <div className='flex pl-16'>
+            <Accordion/>
+        </div>
     </div>
-    
-   <div className='flex'>
-    <Accordion/>
-   </div>
-</div>
-   
        
     </div>
 

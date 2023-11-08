@@ -8,7 +8,7 @@ import fondo from '../Img/fondo-servicios.png'
 
 function Servicios() {
     return ( 
-    <div id="Servicios" className='lg:h-screen'style={{minHeight: "100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover"}}>
+    <div id="Servicios" className='h-screen'style={{minHeight: "100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover"}}>
         <div className='py-24'>
             <p className='tituloServicios'>NUESTROS</p>
             <p className='tituloServiciosBold'>SERVICIOS</p>

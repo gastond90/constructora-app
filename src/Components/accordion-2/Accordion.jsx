@@ -114,7 +114,7 @@ export const Accordion = () => {
         const isActive = active === index ? "active" : "";
         return (
           <article
-            key={card.image}
+            key={index}
             className={isActive}
             onClick={() => handleToggle(index)}
           >
