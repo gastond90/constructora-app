@@ -8,21 +8,21 @@ function Footer({handleNavigation}) {
 return (
     <div id="footer" className='bg-rojo-100' style={{width:"auto",height:"25vh"}} >
         <div className='w-full h-full flex items-center flex-col sm:flex-row justify-evenly'>
-            <div className='flex flex-col h-1/3 sm:w-1/3 sm:justify-center sm:justify-start items-center'>
+            <div className='flex flex-col h-1/3 sm:w-1/3 sm:justify-center sm:justify-start items-center hidden sm:block lg:block'>
                 <div className='flex flex-col'>
-                    <p className='footers'>
+                    <p className='footers' onClick={() => handleNavigation("Inicio")}>
                         Home
                     </p>
-                    <p className='footers'>
+                    <p className='footers' onClick={() => handleNavigation("Sobre Nosotros")}>
                         Sobre Nosotros
                     </p>
-                    <p className='footers'>
+                    <p className='footers' onClick={() => handleNavigation("Servicios")}>
                         Servicios
                     </p>
-                    <p className='footers'>
+                    <p className='footers' onClick={() => handleNavigation("Obras")}>
                         Obras
                     </p>
-                    <p className='footers'>
+                    <p className='footers' onClick={() => handleNavigation("Contacto")}>
                         Contacto
                     </p>
                 </div>
@@ -30,7 +30,7 @@ return (
             <div className='flex sm:w-1/3 sm:justify-center'>
                 <img src={fortisLogoBlanco} alt="" className="w-32 sm:w-44" onClick={() => handleNavigation("Inicio")}/>
             </div>
-            <div className='flex h-1/3 sm:w-1/3 sm:justify-center items-center flex-row'>
+            <div className='flex h-1/3 sm:w-1/3 sm:justify-center items-center flex-row '>
                 <Facebook/>
                 <Insta/>
                 <Linkedin/>

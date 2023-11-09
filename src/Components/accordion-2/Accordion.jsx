@@ -5,36 +5,6 @@ import image3 from "./3.jpg";
 import image4 from "./4.jpg";
 import image5 from "./5.jpg";
 import image6 from "./6.jpg";
-/* import image6 from '../../Img/03 ICONO GRUA.png'  */
-
-
-/* const cards = [
-  {
-    header: "Canada",
-    image: image6,
-    text: `Image description here`,
-  },
-  {
-    header: "Bali",
-    image: image6,
-    text: `Image description here`,
-  },
-  {
-    header: "Spain",
-    image: image6,
-    text: `Image description here`,
-  },
-  {
-    header: "Indonesia",
-    image: image6,
-    text: `Image description here`,
-  },
-  {
-    header: "South Africa",
-    image: image6,
-    text: `Image description here`,
-  },
-]; */
 
 const cards = [
   {
@@ -117,14 +87,16 @@ export const Accordion = () => {
             key={index}
             className={isActive}
             onClick={() => handleToggle(index)}
+            style={{backgroundColor:"gray"}}
           >
-            <img /* src={card.image} */ src={image6}/>
-            <div className="content">
+            <div className="content px-4">
+            <img src={image2} className="h-32 pt-2"/>
               <div>
-                <h2>{card.header}</h2>
-                {/* <p>{card.text}</p> */}
+                
+                <h3 className="text-white">{card.header}</h3>
                 {card.content.map((e, index) => (
                 <div key={index} className='flex flex-col items-start justify-center py-2 pl-2'>
+                   
                     <p className="detalleObra text-start font-bold">{e.title}</p>
                     <p className="detalleObra text-start">{e.finalizada? "Obra finalizada " + e.finalizada :"Obra en ejecución" }</p>
                 </div>

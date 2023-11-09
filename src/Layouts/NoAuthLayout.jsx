@@ -1,6 +1,5 @@
 import ApplicationLogo from '../Components/ApplicationLogo';
 import ToggleSidebar from '../Components/SideBar/SideBar';
-import { useState } from 'react';
 import "../Components/SideBar/styles.css";
 import ButtonMenu from '../Components/ButtonMenu';
 import ShadeScreen from '../Components/ShadeScreen';

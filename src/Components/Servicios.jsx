@@ -14,7 +14,7 @@ function Servicios() {
             <p className='tituloServiciosBold'>SERVICIOS</p>
         </div>
             
-        <div className='flex sm:justify-center'>
+        <div className=' sm:justify-center hidden sm:flex'>
             <div className="grid-container">
                 <div className="grid-item"><Cuadrado text={"Análisis Y Armado De Proyectos"}/></div>
                 <div className="grid-item"><Cuadrado text={"Obras De Arquitectura"}/></div>

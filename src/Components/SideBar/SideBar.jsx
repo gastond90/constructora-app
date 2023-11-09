@@ -21,6 +21,7 @@ function ToggleSidebar({ handleNavigation, isOpen, setIsOpen}) {
         tabIndex="-1"
         aria-labelledby="drawer-navigation-label"
         style={{zIndex: "200"}}
+        onClick={toggleSidebar}
       >
         {isOpen ? 
         <>
