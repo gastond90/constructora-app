@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import fortisLogoBlanco from '../Img/LogoFortisblanco.png'
 import flechaBlanca from '../Img/flecha blanca.png'
-import evo from '../Img/construccionevolucion.png'
+import evo from '../Img/construccionevolucionrojo.png'
 
 function Contacto() {
 
@@ -14,7 +14,8 @@ function Contacto() {
       };
 
     return ( 
-    <div id="Contacto" className='sm:h-screen w-auto'>
+    <div id="Contacto" className='sm:h-screen w-auto flex'>
+        
         <div className=' flex flex-col items-center w-full justify-start h-full'>
             <div className='flex w-full sm:w-1/2 justify-start pl-4 sm:pl-0 pt-16 sm:pt-32'>
             <p className='pcontacto sm:w-1/2 text-2xl sm:text-5xl' style={{ fontWeight:"bolder"}}>
@@ -41,6 +42,10 @@ function Contacto() {
                     SALTA, ARGENTINA
                 </p>
             </div>
+        </div>
+
+        <div className=''>
+            <img src={evo} alt="" className="h-48 m-8 mt-12 hidden sm:block"/>
         </div>
     </div> );
 }

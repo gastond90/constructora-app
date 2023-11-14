@@ -6,10 +6,10 @@ import Linkedin from './Linkedin';
 
 function Footer({handleNavigation}) {
 return (
-    <div id="footer" className='bg-rojo-100' style={{width:"auto",height:"25vh"}} >
-        <div className='w-full h-full flex items-center flex-col sm:flex-row justify-evenly'>
-            <div className='flex flex-col h-1/3 sm:w-1/3 sm:justify-center sm:justify-start items-center hidden sm:block lg:block'>
-                <div className='flex flex-col'>
+    <div id="footer" className='bg-rojo-100 ' style={{width:"auto",height:"25vh"}} >
+        <div className='w-full h-full flex items-center flex-col sm:flex-row justify-evenly sm:px-16 lg:px-16'>
+            <div className='flex flex-col h-1/3 sm:w-1/5 sm:justify-center sm:justify-start items-center hidden sm:flex lg:flex'>
+                <div className='flex flex-col items-start'>
                     <p className='footers' onClick={() => handleNavigation("Inicio")}>
                         Home
                     </p>
@@ -27,10 +27,10 @@ return (
                     </p>
                 </div>
             </div>
-            <div className='flex sm:w-1/3 sm:justify-center'>
+            <div className='flex sm:w-3/5 sm:justify-center'>
                 <img src={fortisLogoBlanco} alt="" className="w-32 sm:w-44" onClick={() => handleNavigation("Inicio")}/>
             </div>
-            <div className='flex h-1/3 sm:w-1/3 sm:justify-center items-center flex-row '>
+            <div className='flex h-1/3 sm:w-1/5 sm:justify-center items-center flex-row '>
                 <Facebook/>
                 <Insta/>
                 <Linkedin/>

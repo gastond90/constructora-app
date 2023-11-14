@@ -288,7 +288,7 @@ div::-webkit-scrollbar-thumb {
   border-radius: 0.25rem; /* Optional: Add some border-radius for a more subtle look */
 }
 
-.accordion-item { width: 50vw}
+/* .accordion-item { width: 50vw} */
 
 
 .shade-screen-container{
@@ -417,7 +417,7 @@ article.active .content {
   }
   .footers{
     font-family: 'Neue Regular';
-    font-size: 13px;
+    font-size: 12px;
     display:flex;
     color: white;
     cursor: pointer;

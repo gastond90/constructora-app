@@ -11,14 +11,14 @@ function AccordionItem({ title, content, isOpen, onToggle }) {
         onToggle(!isOpen);
     };
     return (
-        <div className={`transition w-3/4 accordion-item ${isOpen ? 'bg-white' : ''} ${isOpen ? 'text-rojo-100' : 'text-white'}`}>
+        <div className={`transition accordion-item ${isOpen ? 'bg-white' : ''} ${isOpen ? 'text-rojo-100' : 'text-white'}`}>
     {/* <div className={`transition w-3/4 ${isOpen ? 'bg-white' : ''} ${isOpen ? 'text-rojo-100' : 'text-white'}`}> */}
 
-        <div className={`w-full hover:bg-white hover:text-rojo-100 accordion-header cursor-pointer transition flex justify-between space-x-5 px-12 items-center h-10  border-b border-white`} onClick={toggleAccordion}>
+        <div className={`w-full hover:bg-white hover:text-rojo-100 accordion-header cursor-pointer transition flex justify-between space-x-5 px-4 items-center h-10  border-b border-white`} onClick={toggleAccordion}>
             <h3 className={`tituloObra hover:text-rojo-100 ${isOpen ? 'text-rojo-100' : ''}`}>{title}</h3>
             <p className='tituloObra pr-8'>{isOpen ? '-' : '+'}</p>
         </div>
-        <div className={`w-full bg-gray-700 text-white border-b border-white accordion-content pt-8 px-10 overflow-hidden ${isOpen ? 'max-h-full' : 'max-h-0 hidden'}`}>
+        <div className={`w-full bg-gray-700 text-white border-b border-white accordion-content pt-6 px-6 overflow-hidden ${isOpen ? 'max-h-full' : 'max-h-0 hidden'}`}>
             {content.map((e, index) => (
                 <div key={index} className='flex flex-col items-start justify-center py-2 pl-2'>
                     <p className="detalleObra text-start font-bold">{e.title}</p>
@@ -32,11 +32,8 @@ function AccordionItem({ title, content, isOpen, onToggle }) {
 const [openItemIndex, setOpenItemIndex] = useState(-1);
 
 const handleToggle = (index) => {
-if (openItemIndex === index) {
-    setOpenItemIndex(-1); // Close the item if it's already open
-} else {
-    setOpenItemIndex(index);
-}
+if (openItemIndex === index) { setOpenItemIndex(-1); // Close the item if it's already open
+} else {setOpenItemIndex(index)}
 };
 
 const accordionItemsData = [
@@ -109,16 +106,16 @@ const accordionItemsData = [
 return (
     <>
     
-{/* <div id="Obras" style={{width:"auto",maxHeight:"100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover",width:"100vw"
+<div id="Obras" className='flex sm:hidden' style={{width:"auto",maxHeight:"100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover",width:"100vw"
 }}>
-    <div className='flex w-full justify-center items-center pt-16' >
-        <div className="w-1/3 flex flex-col items-center" >
+    <div className='flex w-full justify-center items-center py-16' >
+       {/*  <div className="w-1/3 flex flex-col items-center" >
             <img src={TIULOOBRA} alt="" className="w-40"/>
             <img src={CASCOOBRA} alt="" className="w-80"/>
-        </div>
+        </div> */}
 
-        <div className="w-2/3 flex flex-col justify-center items-center">
-            <div style={{maxHeight:"60vh", overflowY:'auto'}}>
+        <div className="w-full flex flex-col justify-center items-center h-screen">
+            <div style={{height:"90vh", overflowY:'auto'}} className='flex flex-col justify-between'>
             {accordionItemsData.map((item, index) => (
                 <AccordionItem
                     key={index}
@@ -131,10 +128,10 @@ return (
             </div>
         </div>
     </div>
-
-    <img src={banda} alt="" className="pb-4 w-full"/>
-</div> */}
-    <div id="Obras" style={{width:"auto"}}>
+</div>
+    
+    
+<div id="Obras" style={{width:"auto"}} className='hidden sm:flex'>
     <div className='flex flex-col items-center w-full justify-center bg-azul-100 py-16 px-32' >
         <img src={CASCOOBRA} alt="" className="w-60"/>
 

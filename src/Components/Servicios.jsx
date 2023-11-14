@@ -5,10 +5,11 @@ import flechita from '../Img/04 FLECHA.png'
 import grua from '../Img/03 ICONO GRUA.png'
 import F from '../Img/01 ICONO F.png'
 import fondo from '../Img/fondo-servicios.png'
+import resp from '../Img/ServiciosResponsive.png'
 
 function Servicios() {
     return ( 
-    <div id="Servicios" className='h-screen'style={{minHeight: "100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover"}}>
+    <div id="Servicios" /* className='h-screen' */ style={{minHeight: "100vh",/* backgroundImage: `url(${fondo})`, */ backgroundSize:"cover"}}>
         <div className='py-24'>
             <p className='tituloServicios'>NUESTROS</p>
             <p className='tituloServiciosBold'>SERVICIOS</p>
@@ -28,7 +29,11 @@ function Servicios() {
                 <div className="grid-item"><Cuadrado img={F}/></div>
             </div>
         </div>
+        <div className='w-screen flex justify-center'>
+            <img src={resp} alt="" className="flex sm:hidden"/>
         </div>
+       
+    </div>
      );
 }
 
