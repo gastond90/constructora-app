@@ -27,6 +27,9 @@ module.exports = {
       '1/6-screen': '16vw', // 25% of the viewport width
       '1/18-screen': '5.5vw', // 50% of the viewport width
       '3/4-screen': '75vw', // 75% of the viewport width
+    },
+    backgroundImage: {
+      'servicios': "url('../src/Img/fondo-servicios.png')",
     }
   },
   },
