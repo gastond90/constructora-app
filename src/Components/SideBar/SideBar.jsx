@@ -26,10 +26,10 @@ function ToggleSidebar({ handleNavigation, isOpen, setIsOpen}) {
         {isOpen ? 
         <>
         <div className="h-1/5 submenu2 items-start w-full justify-center">
-        <img src={icono} className="w-6 m-16 h-auto"/>
+        <img src={icono} className="w-6 m-16 h-auto" alt=""/>
         </div>
         <div className="h-1/5 submenu2 justify-center">
-        <img src={logo2} className="w-48 h-auto cursor-pointer" onClick={toggleSidebar}></img>
+        <img src={logo2} className="w-48 h-auto cursor-pointer" alt="" onClick={toggleSidebar}></img>
         </div>
         <div className="h-3/5 submenu2 justify-start w-2/5">
           <ButtonMenu text={"Sobre Nosotros"} onClick={() => handleNavigation("Sobre Nosotros")}/>
@@ -45,7 +45,7 @@ function ToggleSidebar({ handleNavigation, isOpen, setIsOpen}) {
         : 
         <div className="h-full">
           <div className="h-1/5 submenu">
-            <img src={logo} className="w-12 h-auto"></img>
+            <img src={logo} className="w-12 h-auto" alt=""></img>
           </div>
           <div className="h-3/5 submenu border-t border-b border-black">
           <div>

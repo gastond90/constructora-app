@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import fortisLogoBlanco from '../Img/LogoFortisblanco.png'
-import flechaBlanca from '../Img/flecha blanca.png'
 import evo from '../Img/construccionevolucionrojo.png'
 
 function Contacto() {

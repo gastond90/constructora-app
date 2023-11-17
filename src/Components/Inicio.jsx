@@ -1,10 +1,8 @@
 import React from 'react';
-import Salta from './Salta';
 import grilla from '../Img/grilla.png'
 import fortisLogo from '../Img/fortispalabra.svg'
 import fondoportada from '../Img/INICIO.png'
 import resp from '../Img/INICIOResp.png'
-
 
 function Inicio() {
 return ( 

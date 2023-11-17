@@ -1,10 +1,5 @@
 import { useState } from "react";
-import image1 from "./1.jpg";
 import image2 from "./2.jpg";
-import image3 from "./3.jpg";
-import image4 from "./4.jpg";
-import image5 from "./5.jpg";
-import image6 from "./6.jpg";
 
 const cards = [
   {
@@ -59,7 +54,7 @@ const cards = [
   {
       header :"Seil Engineering",
       content: [
-      {title:"Cerramiento nave Industrial Proyecto Posco Downstream", finalizada:""}, , 
+      {title:"Cerramiento nave Industrial Proyecto Posco Downstream", finalizada:""},
   ],
       
   },
@@ -90,7 +85,7 @@ export const Accordion = () => {
             style={{backgroundColor:"gray"}}
           >
             <div className="content px-4">
-            <img src={image2} className="h-32 pt-2"/>
+            <img src={image2} className="h-32 pt-2" alt=""/>
               <div>
                 
                 <h3 className="text-white">{card.header}</h3>
