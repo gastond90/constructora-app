@@ -16,7 +16,7 @@ const toggleSidebar = () => {setIsOpen(!isOpen)};
                 showingNavigationDropdown ? " bg-rojo-100" : ""
                 }` } >
                     <div className="flex">
-                        <div className="shrink-0 flex items-center">
+                        <div className="shrink-0 flex items-center"  onClick={() => handleNavigation("Inicio")} >
                             <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
                         </div>
                     </div>            

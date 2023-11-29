@@ -421,6 +421,7 @@ article.active .content {
     display:flex;
     color: white;
     cursor: pointer;
+    font-weight: bolder;
   }
 
   .input{

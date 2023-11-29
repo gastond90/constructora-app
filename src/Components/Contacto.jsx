@@ -11,6 +11,14 @@ function Contacto() {
         window.location.href = email;
       };
 
+      const sendWhatsAppMessage = () => {
+        const phoneNumber = '5493875326762'; 
+        const message = 'Hola!';
+        const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+      
+        window.open(url, '_blank');
+      };
+
     return ( 
     <div id="Contacto" className='sm:h-screen w-auto flex'>
         
@@ -30,12 +38,12 @@ function Contacto() {
                 <button className='enviar' onClick={sendEmail}>Enviar</button>
                 </div>
             <div className='w-11/12 sm:w-1/2 flex flex-col items-end sm:items-start mb-2'>
-                <p className='contactos'>
+                <p title='Escribinos' className='contactos cursor-pointer' onClick={sendWhatsAppMessage}>
                     TEL.<p style={{color:"red"}}>+3875 32-6762</p> 
                 </p>
-                <p className='contactos'>
-                    DIRECCIÓN <p style={{color:"red", marginLeft:"1rem"}}>GRAND BOURG</p> 
-                </p>
+                <a title='Ver Mapa' className='contactos' target="_blank" href='https://www.google.com/maps/@-24.7703201,-65.4091162,3a,75y,319.84h,90t/data=!3m6!1e1!3m4!1saIVcZdlnn3miq9wJ1gVXyw!2e0!7i16384!8i8192?entry=ttu '>
+                    DIRECCIÓN <p style={{color:"red", marginLeft:"1rem"}}>MITRE 1571</p> 
+                </a>
                 <p className='contactos'>
                     SALTA, ARGENTINA
                 </p>
