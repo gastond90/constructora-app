@@ -4,7 +4,6 @@ import casco from '../Img/02 ICONO CASCO.png'
 import flechita from '../Img/04 FLECHA.png'
 import grua from '../Img/03 ICONO GRUA.png'
 import F from '../Img/01 ICONO F.png'
-import fondo from '../Img/fondo-servicios.png'
 import resp from '../Img/ServiciosResponsive.png'
 
 function Servicios() {
