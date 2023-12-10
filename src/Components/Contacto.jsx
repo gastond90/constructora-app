@@ -22,22 +22,22 @@ function Contacto() {
     return ( 
     <div id="Contacto" className='sm:h-screen w-auto flex'>
         
-        <div className=' flex flex-col items-center w-full justify-start h-full'>
-            <div className='flex w-full sm:w-1/2 justify-start pl-4 sm:pl-0 pt-16 sm:pt-32'>
-            <p className='pcontacto sm:w-1/2 text-2xl sm:text-5xl' style={{ fontWeight:"bolder"}}>
-                CONTACTO
-            </p>
+        <div className=' flex flex-col items-center w-full h-full justify-center'>
+            <div className='flex w-full sm:w-1/2 justify-start pl-4 sm:pl-0 lg:w-3/4'>
+                <p className='pcontacto sm:w-1/2 text-2xl sm:text-5xl' style={{ fontWeight:"bolder"}}>
+                    CONTACTO
+                </p>
             </div>
             
-            <div className='w-11/12 sm:w-1/2 my-4'>
+            <div className='w-11/12 sm:w-1/2 my-4 lg:w-3/4'>
                 <input type="text" name="subject" placeholder="Asunto *" onChange={(e)=>{setAsunto(e.target.value)}} className='input border border-black border-2 p-4 flex w-full justify-start my-4'/>
                 <textarea name="body" placeholder="Mensaje *"  onChange={(e)=>{setCuerpo(e.target.value)}}  className='input border border-black border-2 p-4 flex w-full justify-start py-4 h-32'/>
             </div>
 
-            <div className='w-11/12 sm:w-1/2 justify-start my-2'>
+            <div className='w-11/12 sm:w-1/2 justify-start my-2 lg:w-3/4'>
                 <button className='enviar' onClick={sendEmail}>Enviar</button>
-                </div>
-            <div className='w-11/12 sm:w-1/2 flex flex-col items-end sm:items-start mb-2'>
+            </div>
+            <div className='w-11/12 sm:w-1/2 flex flex-col items-end sm:items-start mb-2 lg:w-3/4'>
                 <p title='Escribinos' className='contactos cursor-pointer' onClick={sendWhatsAppMessage}>
                     TEL.<span style={{color:"red"}}>+3875 32-6762</span> 
                 </p>

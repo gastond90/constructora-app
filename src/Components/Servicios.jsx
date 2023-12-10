@@ -9,12 +9,12 @@ import resp from '../Img/ServiciosResponsive.png'
 function Servicios() {
     return ( 
     <div id="Servicios" className='sm:bg-servicios' style={{minHeight: "100vh", backgroundSize:"cover",}}>
-        <div className='py-16 sm:py-24'>
+        <div className='py-16 '>
             <p className='tituloServicios'>NUESTROS</p>
             <p className='tituloServiciosBold'>SERVICIOS</p>
         </div>
             
-        <div className=' sm:justify-center hidden sm:flex'>
+        <div className='sm:justify-center hidden sm:flex lg:pt-16'>
             <div className="grid-container">
                 <div className="grid-item"><Cuadrado text={"Análisis Y Armado De Proyectos"}/></div>
                 <div className="grid-item"><Cuadrado text={"Obras De Arquitectura"}/></div>

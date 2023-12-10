@@ -8,7 +8,7 @@ function Inicio() {
 return ( 
 <div id="Inicio" style={{width:"auto",backgroundImage: `url(${grilla})`, backgroundSize:"contain"}} className='mx-auto sm:flex sm:flex-col justify-between sm:h-screen lg:h-screen'>
 
-    <div className='flex justify-end sm:pt-8 mb-9 pr-8 sm:pr-8'>
+    <div className='flex justify-end sm:pt-8 mb-8 pr-8 sm:pr-8'>
         <img src={fortisLogo} alt="" className="w-32"/>
     </div>
     <div className='flex justify-start'>
