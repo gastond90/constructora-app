@@ -30,6 +30,9 @@ module.exports = {
     },
     backgroundImage: {
       'servicios': "url('../src/Img/fondo-servicios.png')",
+    },
+    lineHeight: {
+      'nada': '0',
     }
   },
   },

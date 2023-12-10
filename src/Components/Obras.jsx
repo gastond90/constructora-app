@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
-import CASCOOBRA from '../Img/CASCO OBRA.png'
-import fondo from '../Img/fondo-obra.png'
-import { Accordion } from './accordion-2/Accordion';
+import aeropuerto from '../Img/obrasSingle/aeropuerto.png'
+import conectar from '../Img/obrasSingle/conectar.png'
+import hotelSalta from '../Img/obrasSingle/hotelSalta.png'
+import mebac from '../Img/obrasSingle/mebac.png'
+import seil from '../Img/obrasSingle/seil.png'
+import yarade from '../Img/obrasSingle/yarade.png'
+import SingleObra from './SingleObra';
+import ObraAeropuerto from './Obras/ObraAeropuerto';
+
 
 function Obras() {
+
+const [ver, setVer] = useState("all");
+
+console.log(ver)
 
 function AccordionItem({ title, content, isOpen, onToggle }) {
     const toggleAccordion = () => {
@@ -35,15 +45,15 @@ if (openItemIndex === index) { setOpenItemIndex(-1); // Close the item if it's a
 } else {setOpenItemIndex(index)}
 };
 
-const accordionItemsData = [
+const ITEMS = [
 {
     title: "Aeropuerto Salta (AA2000)",
     content: [
     {title:"Construcción de nuevas rentadoras Low Cost", finalizada:"Agosto 2022"}, 
     {title:"Refacción de alcantarillas en zona de pista de aterrizaje", finalizada:"Enero 2023"}, 
     {title:"Remodelación Sala Vip Aeropuerto Salta", finalizada:""}, 
-],
-    
+]   ,
+    img:aeropuerto
 },
 {
     title: "Hotel Salta",
@@ -51,22 +61,23 @@ const accordionItemsData = [
     {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
     {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
 ],
-    
+img:hotelSalta
 },
 {
-    title: "MEBAC - Tienda de Informática",
+    title: "MEBAC",
     content: [
     {title:"Construcción de nuevo depósito y oficinas administrativas", finalizada:"Mayo 2023"}, 
      
 ],
+img:mebac
 },
 
 {
-    title: "Proyecto Conectar Salta 1 - convenio con Saltic S.E.",
+    title: "Proyecto Conectar",
     content: [
     {title:"Instalación de shelters y de fibra óptica que amplía la conectividad para las provincias de Salta, Jujuy y Tucumán", finalizada:"Junio 2023"}, 
 ],
-    
+img:conectar
 },
 {
     title: "Fernando Yarade y Asociados S.R.L.",
@@ -74,9 +85,9 @@ const accordionItemsData = [
     {title:"Refacciones varias", finalizada:"Noviembre 2022"}, 
     {title:"Refacciones Varias -  Consultora Pluss", finalizada:"Julio 2023"}, 
 ],
-    
+img:yarade
 },
-{
+/* {
     title: "INVLAC Construcciones SRL",
     content: [
     {title:"Construcción de Vivienda Unifamiliar. Vivienda Cernusco. Salta Capital, Barrio Privado La Reserva. 327,5 m2", finalizada:""}, 
@@ -84,28 +95,29 @@ const accordionItemsData = [
     {title:"Construcción de Vivienda Unifamiliar. Estancia Ivael. Salta Chicoana. 365 m2", finalizada:"Agosto 2023"}, 
 ],
     
-},
+}, */
 {
     title: "Seil Engineering",
     content: [
     {title:"Cerramiento nave Industrial Proyecto Posco Downstream", finalizada:""},
 ],
-    
+img:seil
 },
-{
+/* {
     title: "Weiss Salta SAS",
     content: [
     {title:"Construcción local comercial. Salta Capital. 210 m2", finalizada:""}, 
 ],
     
-},
+}, */
+
 
 ]; 
 
 return (
     <>
     
-<div id="Obras" className='flex sm:hidden' style={{maxHeight:"100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover",width:"100vw"}}>
+{/* <div id="Obras" className='flex sm:hidden' style={{maxHeight:"100vh",backgroundImage: `url(${fondo})`, backgroundSize:"cover",width:"100vw"}}>
     <div className='flex w-full justify-center items-center py-16' >
         <div className="w-full flex flex-col justify-center items-center h-screen">
             <div style={{height:"90vh", overflowY:'auto'}} className='flex flex-col justify-between'>
@@ -121,24 +133,24 @@ return (
             </div>
         </div>
     </div>
-</div>
+</div> */}
     
     
-<div id="Obras" style={{width:"auto"}} className='hidden sm:flex'>
-    <div className='flex flex-col items-center w-full justify-center bg-azul-100 py-16 px-32' >
-        <img src={CASCOOBRA} alt="" className="w-60"/>
+    {ver==="all" && 
+    <div id="Obras" className='hidden sm:flex sm:bg-servicios w-full' style={{minHeight: "100vh", backgroundSize:"cover", width:"100vw"}}>
+     <div className='flex flex-col items-center w-full justify-center py-16 px-32' >
+        {/* <img src={CASCOOBRA} alt="" className="w-60"/> */}
+        <p className='tituloObras2'>↘ OBRAS</p>
+            <div className='flex flex-wrap w-full'>
+                {ITEMS.map(item=>
+                <div key={item.text + item.title}>
+                    <SingleObra bg={item.img} text={item.title} onClick={()=>setVer(item.title)}/>
+                </div>)}
+            </div>
+    </div>
+</div>}
 
-    <div className='flex items-center justify-between'>
-        <div className='flex justify-start'>
-            <p className='tituloObras'>OBRAS</p>
-        </div>
-        <div className='flex pl-16'>
-            <Accordion/>
-        </div>
-    </div>
-       
-    </div>
-</div>
+{ver==="Aeropuerto Salta (AA2000)" && <ObraAeropuerto setVer={setVer}/>}
 
 </>
 );}
