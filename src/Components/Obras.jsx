@@ -5,8 +5,12 @@ import hotelSalta from '../Img/obrasSingle/hotelSalta.png'
 import mebac from '../Img/obrasSingle/mebac.png'
 import seil from '../Img/obrasSingle/seil.png'
 import yarade from '../Img/obrasSingle/yarade.png'
-import SingleObra from './SingleObra';
+import SingleObra from './Obras/SingleObra';
 import ObraAeropuerto from './Obras/ObraAeropuerto';
+import ObraHotelSalta from './Obras/ObraHotelSalta';
+import ObraMebac from './Obras/ObraMebac';
+import ObraConectar from './Obras/ObraConectar';
+import ObraYarade from './Obras/ObraYarade';
 
 
 function Obras() {
@@ -137,20 +141,27 @@ return (
     
     
     {ver==="all" && 
-    <div id="Obras" className='hidden sm:flex sm:bg-servicios w-full' style={{minHeight: "100vh", backgroundSize:"cover", width:"100vw"}}>
-     <div className='flex flex-col items-center w-full justify-center py-16 px-32' >
-        {/* <img src={CASCOOBRA} alt="" className="w-60"/> */}
-        <p className='tituloObras2'>↘ OBRAS</p>
-            <div className='flex flex-wrap w-full'>
-                {ITEMS.map(item=>
-                <div key={item.text + item.title}>
-                    <SingleObra bg={item.img} text={item.title} onClick={()=>setVer(item.title)}/>
-                </div>)}
-            </div>
+    <div id="Obras" className=' sm:bg-servicios w-full' style={{minHeight: "100vh", backgroundSize:"cover"}}>
+    <div className='flex sm:hidden lg:hidden bg-azul-100 w-full h-32 items-center'>
+        <p className='tituloObras2 pl-4' style={{color:"white"}}>OBRAS</p>
+    </div>
+    <div className='flex flex-col items-center w-full justify-center py-16 px-8'>
+        
+        <p className='tituloObras2 hidden sm:flex lg:flex'>↘ OBRAS</p>
+        <div className='flex flex-wrap w-full justify-center'>
+            {ITEMS.map(item=>
+            <div key={item.text + item.title}>
+                <SingleObra bg={item.img} text={item.title} onClick={()=>setVer(item.title)}/>
+            </div>)}
+        </div>
     </div>
 </div>}
 
 {ver==="Aeropuerto Salta (AA2000)" && <ObraAeropuerto setVer={setVer}/>}
+{ver==="Hotel Salta" && <ObraHotelSalta setVer={setVer}/>}
+{ver==="MEBAC" && <ObraMebac setVer={setVer}/>}
+{ver==="Proyecto Conectar" && <ObraConectar setVer={setVer}/>}
+{ver==="Fernando Yarade y Asociados S.R.L." && <ObraYarade setVer={setVer}/>}
 
 </>
 );}
