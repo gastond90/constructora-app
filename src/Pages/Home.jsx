@@ -7,6 +7,7 @@ import Obras from '../Components/Obras';
 import Contacto from '../Components/Contacto';
 import Footer from '../Components/Footer';
 import { useNavigate } from 'react-router-dom';
+import Whatsapp from '../Components/Whatsapp';
 
 export default function Home() {
 
@@ -46,7 +47,9 @@ return (
             <Servicios/>
             <Obras/>
             <Contacto/>
+            <Whatsapp/>
             <Footer handleNavigation={handleNavigation}/>
+            
           </div>
           
         </NoAuthLayout>
