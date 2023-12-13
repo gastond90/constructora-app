@@ -11,13 +11,13 @@ import ObraHotelSalta from './Obras/ObraHotelSalta';
 import ObraMebac from './Obras/ObraMebac';
 import ObraConectar from './Obras/ObraConectar';
 import ObraYarade from './Obras/ObraYarade';
+import { useLocation } from 'react-router-dom';
 
 
 function Obras() {
 
 const [ver, setVer] = useState("all");
 
-console.log(ver)
 
 function AccordionItem({ title, content, isOpen, onToggle }) {
     const toggleAccordion = () => {
@@ -57,7 +57,8 @@ const ITEMS = [
     {title:"Refacción de alcantarillas en zona de pista de aterrizaje", finalizada:"Enero 2023"}, 
     {title:"Remodelación Sala Vip Aeropuerto Salta", finalizada:""}, 
 ]   ,
-    img:aeropuerto
+    img:aeropuerto,
+    link:"AA2000"
 },
 {
     title: "Hotel Salta",
@@ -65,7 +66,8 @@ const ITEMS = [
     {title:"Refacciones varias - Zona de lavandería", finalizada:"Mayo 2022"}, 
     {title:"Refacciones Varias - Zona de Cocinas", finalizada:"Enero 2023"}, 
 ],
-img:hotelSalta
+    img:hotelSalta,
+    link:"HotelSalta"
 },
 {
     title: "MEBAC",
@@ -73,7 +75,8 @@ img:hotelSalta
     {title:"Construcción de nuevo depósito y oficinas administrativas", finalizada:"Mayo 2023"}, 
      
 ],
-img:mebac
+    img:mebac,
+    link:"MEBAC"
 },
 
 {
@@ -81,7 +84,8 @@ img:mebac
     content: [
     {title:"Instalación de shelters y de fibra óptica que amplía la conectividad para las provincias de Salta, Jujuy y Tucumán", finalizada:"Junio 2023"}, 
 ],
-img:conectar
+    img:conectar,
+    link:"ProyectoConectar"
 },
 {
     title: "Fernando Yarade y Asociados S.R.L.",
@@ -89,7 +93,8 @@ img:conectar
     {title:"Refacciones varias", finalizada:"Noviembre 2022"}, 
     {title:"Refacciones Varias -  Consultora Pluss", finalizada:"Julio 2023"}, 
 ],
-img:yarade
+    img:yarade,
+    link:"FYyAS"
 },
 /* {
     title: "INVLAC Construcciones SRL",
@@ -105,16 +110,9 @@ img:yarade
     content: [
     {title:"Cerramiento nave Industrial Proyecto Posco Downstream", finalizada:""},
 ],
-img:seil
+    img:seil,
+    link:"Seil"
 },
-/* {
-    title: "Weiss Salta SAS",
-    content: [
-    {title:"Construcción local comercial. Salta Capital. 210 m2", finalizada:""}, 
-],
-    
-}, */
-
 
 ]; 
 
@@ -145,23 +143,23 @@ return (
     <div className='flex sm:hidden lg:hidden bg-azul-100 w-full h-32 items-center'>
         <p className='tituloObras2 pl-4' style={{color:"white"}}>OBRAS</p>
     </div>
-    <div className='flex flex-col items-center w-full justify-center py-16 px-8'>
+    <div className='flex flex-col items-center w-full justify-center py-16'>
         
         <p className='tituloObras2 hidden sm:flex lg:flex'>↘ OBRAS</p>
         <div className='flex flex-wrap w-full justify-center'>
             {ITEMS.map(item=>
             <div key={item.text + item.title}>
-                <SingleObra bg={item.img} text={item.title} onClick={()=>setVer(item.title)}/>
+                <SingleObra bg={item.img} text={item.title} link={item?.link}/* onClick={()=>setVer(item.title)} *//>
             </div>)}
         </div>
     </div>
 </div>}
 
-{ver==="Aeropuerto Salta (AA2000)" && <ObraAeropuerto setVer={setVer}/>}
+{/* {ver==="Aeropuerto Salta (AA2000)" && <ObraAeropuerto setVer={setVer}/>}
 {ver==="Hotel Salta" && <ObraHotelSalta setVer={setVer}/>}
 {ver==="MEBAC" && <ObraMebac setVer={setVer}/>}
 {ver==="Proyecto Conectar" && <ObraConectar setVer={setVer}/>}
-{ver==="Fernando Yarade y Asociados S.R.L." && <ObraYarade setVer={setVer}/>}
+{ver==="Fernando Yarade y Asociados S.R.L." && <ObraYarade setVer={setVer}/>} */}
 
 </>
 );}

@@ -33,6 +33,9 @@ module.exports = {
     },
     lineHeight: {
       'nada': '0',
+    },
+    height: {
+      'nos': '120vh',
     }
   },
   },

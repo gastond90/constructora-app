@@ -6,6 +6,7 @@ import icono from '../../Img/01 ICONO F.png'
 import ButtonMenu from "../ButtonMenu";
 import Facebook from "../Facebook";
 import Insta from "../Insta";
+import Linkedin from "../Linkedin";
 
 function ToggleSidebar({ handleNavigation, isOpen, setIsOpen}) {
 
@@ -23,6 +24,7 @@ function ToggleSidebar({ handleNavigation, isOpen, setIsOpen}) {
         style={{zIndex: "200"}}
         onClick={toggleSidebar}
       >
+         
         {isOpen ? 
         <>
         <div className="h-1/5 submenu2 items-start w-full justify-center">
@@ -39,6 +41,7 @@ function ToggleSidebar({ handleNavigation, isOpen, setIsOpen}) {
         <div className="flex justify-end mt-4">
         <Facebook/>
         <Insta/>
+        <Linkedin/>
         </div>
         </div>
         </>
