@@ -6,6 +6,7 @@ import grua from '../Img/03 ICONO GRUA.png'
 import F from '../Img/01 ICONO F.png'
 import resp from '../Img/ServiciosResponsive.png'
 import resp2 from '../Img/nosotrosResp.png'
+import ServicioResp from './ServicioResp';
 
 function Servicios() {
     return ( 
@@ -29,8 +30,13 @@ function Servicios() {
                 <div className="grid-item"><Cuadrado img={F}/></div>
             </div>
         </div>
-        <div className='w-screen flex sm:hidden justify-center pb-16'>
-            <img src={resp2} alt="" className="flex sm:hidden"/>
+        <div className='w-screen  sm:hidden justify-center pb-16'>
+         {/*   <img src={resp2} alt="" className="flex sm:hidden"/> */}
+            <ServicioResp text={"Análisis y Armado de Proyectos"}/>
+            <ServicioResp text={"Obras de Arquitectura"}/>
+            <ServicioResp text={"Obras de Infraestructura y Saneamiento"}/>
+            <ServicioResp text={"Obras de Ingeniería"}/>
+            <ServicioResp text={"Obras Hidráulicas"}/>
         </div>
        
     </div>

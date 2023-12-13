@@ -96,6 +96,10 @@ font-size: 2.5rem;
 font-family: 'Neue'; 
 font-size: 1rem;
 }
+.flechamono {
+font-family: 'Disket Mono'; 
+font-size: 1rem;
+}
 
 .textButton {
 font-family: 'Disket Mono'; 
@@ -111,6 +115,12 @@ font-family: 'Neue';
 font-weight: bolder;
 text-align: center;
 font-size: 1rem;
+}
+.serviTexto {
+font-family: 'Disket Mono'; 
+font-weight: bolder;
+text-align: center;
+font-size: 10px;
 }
 
 .detalle {
