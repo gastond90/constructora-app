@@ -1,6 +1,6 @@
 function Insta() {
     return (  
-        <a href="https://www.instagram.com/fortis.srl" target="_blank" >
+        <a href="https://www.instagram.com/fortis.srl" target="_blank" rel="noreferrer" >
     <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-4 w-4 cursor-pointer"

@@ -1,4 +1,3 @@
-import ApplicationLogo from '../Components/ApplicationLogo';
 import ToggleSidebar from '../Components/SideBar/SideBar';
 import "../Components/SideBar/styles.css";
 import ButtonMenu from '../Components/ButtonMenu';

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NoAuthLayout from '../Layouts/NoAuthLayout';
 import Inicio from '../Components/Inicio';
 import Nosotros from '../Components/Nosotros';
@@ -6,7 +6,7 @@ import Servicios from '../Components/Servicios';
 import Obras from '../Components/Obras';
 import Contacto from '../Components/Contacto';
 import Footer from '../Components/Footer';
-import { useHistory, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
 
@@ -31,31 +31,6 @@ useEffect(() => {
     }
   }
 }, []);
-
-/* const targetRef = useRef(null);
-
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        } else {
-          entry.target.classList.remove('fade-in');
-        }
-      });
-    },
-    { threshold: 0.5 } // Adjust the threshold as needed
-  );
-
-  observer.observe(targetRef.current);
-
-  // Cleanup the observer when the component is unmounted
-  return () => {
-    observer.disconnect();
-  };
-}, []); // Run effect once when the component mounts */
-  
 return (
   
         <NoAuthLayout

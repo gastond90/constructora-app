@@ -3,7 +3,7 @@ import img from '../../Img/obrasSingle/aeropuertoVista.png';
 import casco from '../../Img/CASCO OBRA.png';
 import VerObras from './VerObras';
 
-function ObraAeropuerto({setVer}) {
+function ObraAeropuerto() {
     return (
         <div className='w-full h-screen bg-azul-100 flex flex-col justify-center sm:flex-row lg:flex-row'>
         <div className='w-full sm:w-1/2 p-16'>
@@ -19,7 +19,7 @@ function ObraAeropuerto({setVer}) {
             <p className='obraDesc mt-4'>Remodelación Sala Vip Aeropuerto Salta.</p>
             <p className='obraDesc2 mb-4'>En ejecución.</p>
 
-            <VerObras onClick={()=>setVer("all")}/>
+            <VerObras/>
         </div>
         <div className='hidden sm:flex w-1/2' style={{backgroundImage: `url(${img})`, backgroundSize:"cover"}}>
         </div>

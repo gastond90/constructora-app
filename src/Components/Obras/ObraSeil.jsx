@@ -3,7 +3,7 @@ import img from '../../Img/obrasSingle/conectarVista.png';
 import casco from '../../Img/CASCO OBRA.png';
 import VerObras from './VerObras';
 
-function ObraSeil({setVer}) {
+function ObraSeil() {
     return (
         <div className='w-full h-screen bg-azul-100 flex flex-col justify-center sm:flex-row lg:flex-row'>
         <div className='w-full sm:w-1/2 p-16'>
@@ -15,7 +15,7 @@ function ObraSeil({setVer}) {
            {/*  <p className='obraDesc2'>Obra Finalizada.</p>
             <p className='obraDesc2 mb-4'>Junio 2023</p> */}
             
-            <VerObras  onClick={()=>setVer("all")}/>
+            <VerObras />
             
         </div>
         <div className='hidden sm:flex w-1/2' style={{backgroundImage: `url(${img})`, backgroundSize:"cover"}}>

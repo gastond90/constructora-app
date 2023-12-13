@@ -3,9 +3,9 @@ import img from '../../Img/obrasSingle/hotelVista.png';
 import casco from '../../Img/CASCO OBRA.png';
 import VerObras from './VerObras';
 
-function ObraHotelSalta({setVer}) {
+function ObraHotelSalta() {
     return (
-        <div className='w-full h-screen bg-azul-100 flex flex-col justify-center sm:flex-row lg:flex-row'>
+        <div className='w-full h-screen  overflow-auto bg-azul-100 flex flex-col justify-center sm:flex-row lg:flex-row'>
         <div className='w-full sm:w-1/2 p-16'>
             <img src={casco} alt="" className="w-32"/>
             <p className='obraVista my-4'>Hotel Salta</p>
@@ -18,9 +18,9 @@ function ObraHotelSalta({setVer}) {
             <p className='obraDesc2 '>Obra finalizada.</p>
             <p className='obraDesc2 mb-4'>Enero 2023.</p>
             
-            <VerObras onClick={()=>setVer("all")}/>
+            <VerObras/>
         </div>
-        <div className='hidden sm:flex lg:flex w-1/2' style={{backgroundImage: `url(${img})`, backgroundSize:"cover"}}>
+        <div className='hidden  sm:flex lg:flex w-1/2' style={{backgroundImage: `url(${img})`, backgroundSize:"cover"}}>
         </div>
        
     </div>  );

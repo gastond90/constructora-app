@@ -3,7 +3,7 @@ import img from '../../Img/obrasSingle/yaradeVista2.png';
 import casco from '../../Img/CASCO OBRA.png';
 import VerObras from './VerObras';
 
-function ObraYarade({setVer}) {
+function ObraYarade() {
     return (
     <div className='w-full h-screen bg-azul-100 flex flex-col justify-center sm:flex-row'>
         <div className='w-full sm:w-1/2 p-16'>
@@ -15,8 +15,7 @@ function ObraYarade({setVer}) {
             
             <p className='obraDesc mt-4'>Refacciones varias consultora Pluss. </p>
             <p className='obraDesc2 mb-4'>Obra finalizada. Julio 2023</p>
-
-            <VerObras onClick={()=>setVer("all")}/>
+            <VerObras/>
         </div>
         <div className='hidden sm:flex w-1/2' style={{backgroundImage: `url(${img})`, backgroundSize:"cover"}}>
         </div>
