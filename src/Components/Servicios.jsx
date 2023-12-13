@@ -4,13 +4,11 @@ import casco from '../Img/02 ICONO CASCO.png'
 import flechita from '../Img/04 FLECHA.png'
 import grua from '../Img/03 ICONO GRUA.png'
 import F from '../Img/01 ICONO F.png'
-import resp from '../Img/ServiciosResponsive.png'
-import resp2 from '../Img/nosotrosResp.png'
 import ServicioResp from './ServicioResp';
 
 function Servicios() {
     return ( 
-    <div id="Servicios" className='sm:bg-servicios h-auto sm:h-full' style={{/* minHeight: "100vh", */ backgroundSize:"cover",}}>
+    <div id="Servicios" className='sm:bg-servicios h-auto sm:h-full' style={{backgroundSize:"cover"}}>
         <div className='py-16 '>
             <p className='tituloServicios'>NUESTROS</p>
             <p className='tituloServiciosBold'>SERVICIOS</p>

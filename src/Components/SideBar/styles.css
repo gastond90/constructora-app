@@ -343,7 +343,7 @@ border-radius: 0.25rem; /* Optional: Add some border-radius for a more subtle lo
 section {
 display: flex;
 gap: 10px;
-cursor: pointer;
+/* cursor: pointer; */
 }
 
 article {
