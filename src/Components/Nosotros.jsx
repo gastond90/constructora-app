@@ -4,8 +4,8 @@ import flecha from '../Img/flecha.png'
 
 function Nosotros() {
 return ( 
-<div id="Sobre Nosotros" className='h-screen sm:h-nos lg:h-nos sm:pt-32 lg:pt-32 flex flex-col justify-center sm:px-32 lg:px-32' style={{width:"auto"/* ,height:"100vh" *//* , overflowY:'auto' */,backgroundImage: `url(${fondonos})`, backgroundSize:"cover"}}>
-    <div className=' flex sm:flex-col lg:flex-col items-center sm:items-start lg:items-start justify-center sm:justify-start lg:justify-start pt-16 sm:pt-8 lg:pt-4 ml-0 sm:ml-8 lg:ml-8 sm:w-2/5 lg:w-2/5'>
+<div id="Sobre Nosotros" className='h-screen sm:h-nos lg:h-screen sm:pt-32 lg:pt-32 flex flex-col justify-center sm:px-32 lg:px-32' style={{width:"auto",backgroundImage: `url(${fondonos})`, backgroundSize:"cover"}}>
+    <div className=' flex sm:flex-col lg:flex-col items-center sm:items-start lg:items-start justify-center sm:justify-start lg:justify-start pt-16 sm:pt-8 lg:pt-0 ml-0 sm:ml-8 lg:ml-8 sm:w-2/5 lg:w-2/5'>
         <p className='tituloSobre'>SOBRE</p>
         <p className='tituloSobreBold sm:leading-[0rem] ml-2 sm:ml-0 lg:ml-0'>NOSOTROS</p>
         <img src={flecha} alt="" className="w-10 mt-16 mb-4 hidden sm:flex lg:flex"/>

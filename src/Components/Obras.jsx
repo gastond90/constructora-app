@@ -78,17 +78,16 @@ const ITEMS = [
 
 return (
     <>
-    <div id="Obras" className=' sm:bg-servicios w-full' style={{minHeight: "100vh", backgroundSize:"cover"}}>
+    <div id="Obras" className=' sm:bg-servicios w-full' style={{backgroundSize:"cover"}}>
         <div className='flex sm:hidden lg:hidden bg-azul-100 w-full h-32 items-center'>
             <p className='tituloObras2 pl-4' style={{color:"white"}}>OBRAS</p>
         </div>
-        <div className='flex flex-col items-center w-full justify-center py-16'>
-            
-            <p className='tituloObras2 hidden sm:flex lg:flex'>↘ OBRAS</p>
-            <div className='flex flex-wrap w-full justify-center'>
+        <div className='flex flex-col items-center w-full justify-center py-16 '>
+            <p className='tituloObras2 hidden sm:flex lg:flex mb-8'>↘ OBRAS</p>
+            <div className='flex flex-wrap lg:px-36 w-full justify-center'>
                 {ITEMS.map(item=>
-                <div key={item.text + item.title}>
-                    <SingleObra bg={item.img} text={item.title} link={item?.link}/* onClick={()=>setVer(item.title)} *//>
+                <div key={item.text + item.title} className='sm:w-1/3'>
+                    <SingleObra bg={item.img} text={item.title} link={item?.link}/>
                 </div>)}
             </div>
         </div>

@@ -271,21 +271,15 @@ border-radius: 0.25rem; /* Optional: Add some border-radius for a more subtle lo
   }
 }
 
-
 section {
 display: flex;
 gap: 10px;
-/* cursor: pointer; */
 }
-
-
 
 h2,
 p {
 margin: 0;
 }
-
-
 
 .tituloObras {
   font-family: 'Neue';
@@ -298,7 +292,7 @@ margin: 0;
   font-family: 'Neue';
   color: #CF0709;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 3rem;
 }
 
 .contactos{
@@ -392,3 +386,13 @@ width: 100%;
   color: #fff;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 0 0 calc(33.33% - 10px); /* Adjust the percentage and subtract any margin or padding as needed */
+  width: calc(33.33% - 10px); /* Adjust the percentage and subtract any margin or padding as needed */
+  margin: 5px; /* Add margin to create space between columns */
+}
