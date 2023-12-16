@@ -1,6 +1,7 @@
 import React  from 'react';
 import evo from '../Img/construccionevolucionrojo.png'
 
+
 function Contacto() {
 
 const sendWhatsAppMessage = () => {
@@ -26,7 +27,7 @@ window.open(url, '_blank');
                     <div className="info">
                     <a title='Ver Mapa' className='contactos' target="_blank" rel="noreferrer" href='https://www.google.com/maps/@-24.7703201,-65.4091162,3a,75y,319.84h,90t/data=!3m6!1e1!3m4!1saIVcZdlnn3miq9wJ1gVXyw!2e0!7i16384!8i8192?entry=ttu '>
                     <div className="address cursor-pointer">
-                        <i className="bi bi-geo-alt"></i>
+                      <i className="bi bi-geo-alt"></i>
                         <h4>UBICACIÓN:</h4>
                         <p>MITRE 1571, Salta, Argentina, 4400</p>
                     </div>
