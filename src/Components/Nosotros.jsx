@@ -1,9 +1,11 @@
 import React from 'react';
 import fondonos from '../Img/fondonosotros.png'
 import flecha from '../Img/flecha.png'
+import { Fade } from 'react-awesome-reveal';
 
 function Nosotros() {
 return ( 
+    <Fade duration={1500} cascade damping={0.1}>
 <div id="Sobre Nosotros" className='h-screen sm:h-nos lg:h-screen sm:pt-32 lg:pt-32 flex flex-col justify-center sm:px-32 lg:px-32' style={{width:"auto",backgroundImage: `url(${fondonos})`, backgroundSize:"cover"}}>
     <div className=' flex sm:flex-col lg:flex-col items-center sm:items-start lg:items-start justify-center sm:justify-start lg:justify-start pt-16 sm:pt-8 lg:pt-0 ml-0 sm:ml-8 lg:ml-8 sm:w-2/5 lg:w-2/5'>
         <p className='tituloSobre'>SOBRE</p>
@@ -25,7 +27,8 @@ return (
             mercado actual de forma firme y solvente.
         </p>
     </div>
-</div>  );
+</div> 
+</Fade> );
 }
 
 export default Nosotros;

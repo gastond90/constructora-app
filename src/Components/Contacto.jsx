@@ -1,5 +1,6 @@
 import React  from 'react';
 import evo from '../Img/construccionevolucionrojo.png'
+import { Fade } from "react-awesome-reveal";
 
 
 function Contacto() {
@@ -12,6 +13,7 @@ const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURI
 window.open(url, '_blank');
 };
     return ( 
+    <Fade duration={1500} cascade damping={0.1}>
     <div id="Contacto" className='w-auto flex'>
         <div className=' flex flex-col items-center w-full h-full justify-center'>
             <div className='flex w-full sm:w-1/2 justify-start pl-4 sm:pl-0 lg:w-3/4'>
@@ -55,7 +57,9 @@ window.open(url, '_blank');
         <div className=''>
             <img src={evo} alt="" className="h-48 m-8 mt-12 hidden sm:block"/>
         </div>
-    </div> );
+        
+    </div>
+    </Fade> );
 }
 
 export default Contacto;

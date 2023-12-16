@@ -6,6 +6,7 @@ import mebac from '../Img/obrasSingle/mebac.png'
 import seil from '../Img/obrasSingle/seil.png'
 import yarade from '../Img/obrasSingle/yarade.png'
 import SingleObra from './Obras/SingleObra';
+import { Fade } from 'react-awesome-reveal';
 
 function Obras() {
 
@@ -77,7 +78,8 @@ const ITEMS = [
 ]; 
 
 return (
-    <>
+    
+    <Fade duration={1500} cascade damping={0.1}> 
     <div id="Obras" className=' sm:bg-servicios w-full' style={{backgroundSize:"cover"}}>
         <div className='flex sm:hidden lg:hidden bg-azul-100 w-full h-32 items-center'>
             <p className='tituloObras2 pl-4' style={{color:"white"}}>OBRAS</p>
@@ -92,7 +94,7 @@ return (
             </div>
         </div>
     </div>
-</>
+</Fade >
 );}
 
 export default Obras;

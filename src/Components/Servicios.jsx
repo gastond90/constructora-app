@@ -5,9 +5,11 @@ import flechita from '../Img/04 FLECHA.png'
 import grua from '../Img/03 ICONO GRUA.png'
 import F from '../Img/01 ICONO F.png'
 import ServicioResp from './ServicioResp';
+import { Fade } from 'react-awesome-reveal';
 
 function Servicios() {
     return ( 
+    <Fade duration={1500} cascade damping={0.1}>  
     <div id="Servicios" className='sm:bg-servicios h-auto sm:h-full' style={{backgroundSize:"cover"}}>
         <div className='py-16 '>
             <p className='tituloServicios'>NUESTROS</p>
@@ -38,6 +40,7 @@ function Servicios() {
         </div>
        
     </div>
+    </Fade>
      );
 }
 
