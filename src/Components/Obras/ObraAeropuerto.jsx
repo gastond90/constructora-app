@@ -6,7 +6,7 @@ import VerObras from './VerObras';
 function ObraAeropuerto() {
     return (
         <div className='w-full h-screen bg-azul-100 flex flex-col justify-center sm:flex-row lg:flex-row'>
-        <div className='w-full sm:w-1/2 p-16'>
+        <div className='w-full sm:w-1/2 p-16 flex flex-col items-start justify-center'>
             <img src={casco} alt="" className="w-32"/>
             <p className='obraVista my-4'>Aeropuerto Salta (AA2000)</p>
             {triangulo}

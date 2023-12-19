@@ -6,7 +6,7 @@ import VerObras from './VerObras';
 function ObraMebac() {
     return (
         <div className='w-full h-screen bg-azul-100 flex flex-col justify-center sm:flex-row lg:flex-row'>
-        <div className='w-full sm:w-1/2 p-16'>
+        <div className='w-full sm:w-1/2 p-16 flex flex-col items-start justify-center'>
             <img src={casco} alt="" className="w-32"/>
             <p className='obraVista mt-4'>MEBAC</p>
             <p className='obraVista mb-4'>Tienda de Informática</p>
