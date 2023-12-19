@@ -14,7 +14,6 @@ function ObraSeil() {
             <p className='obraDesc mt-8'>Cerramiento nave Industrial Proyecto Posco Downstream.</p>
            {/*  <p className='obraDesc2'>Obra Finalizada.</p>
             <p className='obraDesc2 mb-4'>Junio 2023</p> */}
-            
             <VerObras />
             
         </div>
