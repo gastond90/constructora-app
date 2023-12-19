@@ -15,7 +15,6 @@ function ObraSeil() {
            {/*  <p className='obraDesc2'>Obra Finalizada.</p>
             <p className='obraDesc2 mb-4'>Junio 2023</p> */}
             <VerObras />
-            
         </div>
         <div className='hidden sm:flex w-1/2' style={{backgroundImage: `url(${img})`, backgroundSize:"cover"}}>
         </div>
