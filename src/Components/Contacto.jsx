@@ -37,7 +37,7 @@ window.open(url, '_blank');
                     <div className="email">
                         <i className="bi bi-envelope"></i>
                         <h4>Email:</h4>
-                        <p>fortis@fortis.com</p>
+                        <p>lmassafra@fortissrl.com.ar</p>
                     </div>
 
                     <div className="phone cursor-pointer" title='Escribinos' onClick={sendWhatsAppMessage}>

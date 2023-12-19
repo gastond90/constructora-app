@@ -5,20 +5,19 @@ import VerObras from './VerObras';
 
 function ObraSeil() {
     return (
-        <div className='w-full h-screen bg-azul-100 flex flex-col justify-center sm:flex-row lg:flex-row'>
+    <div className='w-full h-screen bg-azul-100 flex flex-col justify-center sm:flex-row lg:flex-row'>
         <div className='w-full sm:w-1/2 p-16 flex flex-col items-start justify-center'>
             <img src={casco} alt="" className="w-32"/>
             <p className='obraVista my-4'>Seil Engineering</p>
             
             {triangulo}
             <p className='obraDesc mt-8'>Cerramiento nave Industrial Proyecto Posco Downstream.</p>
-           {/*  <p className='obraDesc2'>Obra Finalizada.</p>
+            {/*  <p className='obraDesc2'>Obra Finalizada.</p>
             <p className='obraDesc2 mb-4'>Junio 2023</p> */}
             <VerObras />
         </div>
         <div className='hidden sm:flex w-1/2' style={{backgroundImage: `url(${img})`, backgroundSize:"cover"}}>
         </div>
-       
     </div>  );
 }
 
